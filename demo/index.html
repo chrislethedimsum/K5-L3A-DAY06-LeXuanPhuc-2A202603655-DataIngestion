@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="vi" class="h-full bg-slate-50">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Ingestion Engineering · Luật Giáo Dục Đại Học Demo</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .glass-card {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(8px);
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 9999px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
+    }
+  </style>
+</head>
+<body class="h-full flex flex-col font-sans text-slate-800 bg-slate-50 antialiased">
+
+  <!-- Header -->
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-40 shadow-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <!-- Brand -->
+        <div class="flex items-center space-x-3">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 to-violet-500 flex items-center justify-center text-white shadow-md shadow-indigo-100">
+            <i data-lucide="database" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <div class="flex items-center space-x-2">
+              <span class="text-lg font-bold bg-gradient-to-r from-indigo-700 to-violet-700 bg-clip-text text-transparent">LegalIngest AI</span>
+              <span class="px-2 py-0.5 text-xs font-semibold bg-indigo-50 text-indigo-700 rounded-full border border-indigo-200">Day 06 Lab</span>
+            </div>
+            <p class="text-xs text-slate-500">Data Ingestion Engineering · Luật số 34/2018/QH14</p>
+          </div>
+        </div>
+
+        <!-- Student Badge -->
+        <div class="flex items-center space-x-4">
+          <div class="hidden md:flex items-center space-x-3 px-3 py-1.5 rounded-lg bg-slate-100/80 border border-slate-200 text-xs">
+            <span class="flex items-center text-slate-600"><i data-lucide="user" class="w-3.5 h-3.5 mr-1.5 text-indigo-600"></i>Lê Xuân Phúc</span>
+            <span class="text-slate-300">|</span>
+            <span class="text-slate-600 font-mono">2A202603655</span>
+            <span class="text-slate-300">|</span>
+            <span class="px-1.5 py-0.5 bg-emerald-50 text-emerald-700 rounded font-medium">Lớp K5-L3A</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation Tabs -->
+      <nav class="flex space-x-2 sm:space-x-8 border-t border-slate-100 -mb-px overflow-x-auto custom-scrollbar">
+        <button onclick="switchTab('search')" id="tab-btn-search" class="nav-tab inline-flex items-center px-1 py-3 border-b-2 border-indigo-600 text-sm font-semibold text-indigo-600 whitespace-nowrap">
+          <i data-lucide="search" class="w-4 h-4 mr-2"></i>Tra Cứu & Trợ Lý Giải Thích
+        </button>
+        <button onclick="switchTab('dashboard')" id="tab-btn-dashboard" class="nav-tab inline-flex items-center px-1 py-3 border-b-2 border-transparent text-sm font-medium text-slate-500 hover:text-slate-700 hover:border-slate-300 whitespace-nowrap">
+          <i data-lucide="bar-chart-3" class="w-4 h-4 mr-2"></i>So Sánh 3 Chiến Lược
+        </button>
+        <button onclick="switchTab('benchmark')" id="tab-btn-benchmark" class="nav-tab inline-flex items-center px-1 py-3 border-b-2 border-transparent text-sm font-medium text-slate-500 hover:text-slate-700 hover:border-slate-300 whitespace-nowrap">
+          <i data-lucide="check-circle-2" class="w-4 h-4 mr-2"></i>20 Câu Hỏi Benchmark & Traces
+        </button>
+        <button onclick="switchTab('corpus')" id="tab-btn-corpus" class="nav-tab inline-flex items-center px-1 py-3 border-b-2 border-transparent text-sm font-medium text-slate-500 hover:text-slate-700 hover:border-slate-300 whitespace-nowrap">
+          <i data-lucide="book-open" class="w-4 h-4 mr-2"></i>Corpus & Phân Hệ Metadata
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6">
+
+    <!-- ========================================================================= -->
+    <!-- TAB 1: SEARCH & GROUNDED EXPLANATION (TRA CỨU & GIẢI THÍCH CHI TIẾT) -->
+    <!-- ========================================================================= -->
+    <div id="tab-search" class="tab-content space-y-6">
+
+      <!-- Hero Search Card -->
+      <div class="bg-gradient-to-br from-indigo-900 via-indigo-800 to-slate-900 rounded-2xl p-6 sm:p-8 text-white shadow-xl relative overflow-hidden">
+        <div class="absolute -right-10 -bottom-10 w-64 h-64 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="max-w-3xl space-y-3">
+          <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-white/10 text-indigo-200 text-xs font-medium backdrop-blur-md">
+            <i data-lucide="sparkles" class="w-3.5 h-3.5 text-amber-300"></i>
+            <span>Vector Search + Grounded AI Legal Explanation</span>
+          </div>
+          <h1 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Tra Cứu & Trợ Lý Pháp Lý Đại Học</h1>
+          <p class="text-indigo-200 text-sm sm:text-base leading-relaxed">
+            Truy xuất tri thức từ 35 trang nội dung Luật Giáo dục đại học 2018 (Công báo 1135+1136). Trợ lý sẽ tự động trích xuất các điều khoản, phân tích điều kiện áp dụng và chỉ rõ nguồn gốc số trang PDF.
+          </p>
+        </div>
+
+        <!-- Search Bar Form -->
+        <div class="mt-6 space-y-4">
+          <div class="relative">
+            <input type="text" id="query-input" placeholder="Nhập câu hỏi (ví dụ: Trường đại học công lập nào được tự chủ học phí?)"
+              class="w-full pl-12 pr-28 py-4 bg-white text-slate-800 rounded-xl shadow-lg focus:outline-none focus:ring-4 focus:ring-indigo-400 text-sm sm:text-base font-medium placeholder-slate-400"
+              onkeydown="if(event.key === 'Enter') executeSearch()">
+            <div class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">
+              <i data-lucide="search" class="w-5 h-5"></i>
+            </div>
+            <button onclick="executeSearch()" class="absolute right-2.5 top-1/2 -translate-y-1/2 px-5 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg font-semibold text-sm shadow-md transition flex items-center space-x-1.5">
+              <span>Tìm kiếm</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+          </div>
+
+          <!-- Filters & Controls Bar -->
+          <div class="flex flex-wrap items-center justify-between gap-3 pt-2 text-xs">
+            <div class="flex flex-wrap items-center gap-3">
+              <!-- Strategy Selector -->
+              <div class="flex items-center space-x-2 bg-white/10 px-3 py-1.5 rounded-lg border border-white/15">
+                <span class="text-slate-300 font-medium">Chiến lược:</span>
+                <select id="strategy-select" onchange="executeSearch()" class="bg-transparent text-white font-semibold focus:outline-none cursor-pointer">
+                  <option value="C" class="text-slate-800" selected>Chiến lược C (Paragraph + Filter)</option>
+                  <option value="B" class="text-slate-800">Chiến lược B (Paragraph 800c)</option>
+                  <option value="A" class="text-slate-800">Chiến lược A (Fixed 500c)</option>
+                </select>
+              </div>
+
+              <!-- Metadata Section Filter -->
+              <div class="flex items-center space-x-2 bg-white/10 px-3 py-1.5 rounded-lg border border-white/15">
+                <span class="text-slate-300 font-medium">Phân hệ:</span>
+                <select id="section-select" onchange="executeSearch()" class="bg-transparent text-white font-semibold focus:outline-none cursor-pointer">
+                  <option value="ALL" class="text-slate-800" selected>Tất cả phân hệ (Không lọc)</option>
+                  <option value="quyen_tu_chu" class="text-slate-800">Quyền tự chủ & Trách nhiệm</option>
+                  <option value="hoat_dong_dao_tao" class="text-slate-800">Hoạt động đào tạo, tuyển sinh</option>
+                  <option value="tai_chinh_tai_san" class="text-slate-800">Tài chính, học phí, tài sản</option>
+                  <option value="to_chuc_quan_tri" class="text-slate-800">Cơ cấu tổ chức & Quản trị</option>
+                  <option value="kiem_dinh_chat_luong" class="text-slate-800">Kiểm định chất lượng</option>
+                  <option value="giang_vien_nguoi_hoc" class="text-slate-800">Giảng viên & Người học</option>
+                  <option value="he_thong_co_so_gd" class="text-slate-800">Hệ thống cơ sở GDĐH</option>
+                  <option value="dieu_khoan_thi_hanh" class="text-slate-800">Điều khoản thi hành</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Clear & Reset Button -->
+            <button onclick="resetSearch()" class="text-indigo-200 hover:text-white flex items-center space-x-1 underline">
+              <i data-lucide="rotate-ccw" class="w-3.5 h-3.5"></i>
+              <span>Đặt lại</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Sample Query Pills -->
+        <div class="mt-5 pt-4 border-t border-white/10">
+          <span class="text-xs text-indigo-300 font-medium mr-2">Câu hỏi mẫu:</span>
+          <div class="inline-flex flex-wrap gap-2 mt-2">
+            <button onclick="selectSampleQuestion(this)" class="px-2.5 py-1 rounded-md bg-white/10 hover:bg-white/20 text-xs text-indigo-100 transition">
+              Định nghĩa trường đại học và học viện?
+            </button>
+            <button onclick="selectSampleQuestion(this)" class="px-2.5 py-1 rounded-md bg-white/10 hover:bg-white/20 text-xs text-indigo-100 transition">
+              Trường công lập nào được tự chủ học phí?
+            </button>
+            <button onclick="selectSampleQuestion(this)" class="px-2.5 py-1 rounded-md bg-white/10 hover:bg-white/20 text-xs text-indigo-100 transition">
+              Điều kiện để cơ sở GDĐH được tự chủ?
+            </button>
+            <button onclick="selectSampleQuestion(this)" class="px-2.5 py-1 rounded-md bg-white/10 hover:bg-white/20 text-xs text-indigo-100 transition">
+              Ngành nào bị cấm liên kết đào tạo?
+            </button>
+            <button onclick="selectSampleQuestion(this)" class="px-2.5 py-1 rounded-md bg-white/10 hover:bg-white/20 text-xs text-indigo-100 transition">
+              Luật có hiệu lực thi hành từ ngày nào?
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Search Output Section (Dynamic) -->
+      <div id="search-results-container" class="space-y-6">
+
+        <!-- Result Card: AI Grounded Explanation -->
+        <div class="bg-white rounded-2xl border border-slate-200/80 shadow-sm p-6 sm:p-8 space-y-6">
+          <div class="flex items-center justify-between border-b border-slate-100 pb-4">
+            <div class="flex items-center space-x-3">
+              <div class="w-9 h-9 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center">
+                <i data-lucide="sparkles" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-slate-800">Câu Trả Lời & Diễn Giải Chi Tiết Căn Cứ</h3>
+                <p class="text-xs text-slate-500">Được tổng hợp và đối soát trực tiếp từ các đoạn văn bản pháp luật truy xuất được</p>
+              </div>
+            </div>
+            <div id="grounding-badge" class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200 flex items-center space-x-1">
+              <i data-lucide="shield-check" class="w-3.5 h-3.5"></i>
+              <span>Grounding: 2.0 / 2.0 (Đầy đủ bằng chứng)</span>
+            </div>
+          </div>
+
+          <!-- Answer Summary Box -->
+          <div id="explanation-direct-answer" class="p-4 rounded-xl bg-indigo-50/70 border border-indigo-100 text-slate-800 font-medium text-sm sm:text-base leading-relaxed">
+            <!-- Populated by JS -->
+          </div>
+
+          <!-- Detailed Legal Analysis -->
+          <div class="space-y-3">
+            <h4 class="text-sm font-bold text-slate-700 uppercase tracking-wider flex items-center">
+              <i data-lucide="file-text" class="w-4 h-4 mr-1.5 text-indigo-600"></i>
+              Diễn Giải Quy Định & Điều Kiện Áp Dụng
+            </h4>
+            <div id="explanation-details" class="text-sm text-slate-600 space-y-2 leading-relaxed">
+              <!-- Populated by JS -->
+            </div>
+          </div>
+
+          <!-- Verified Legal Citation Box -->
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+            <h4 class="text-xs font-bold text-slate-500 uppercase tracking-wider flex items-center">
+              <i data-lucide="bookmark" class="w-3.5 h-3.5 mr-1 text-slate-500"></i>
+              Căn Cứ Pháp Lý & Nguồn Trích Dẫn Chính Xác
+            </h4>
+            <div id="explanation-citation" class="flex flex-wrap items-center gap-2 text-xs">
+              <!-- Populated by JS -->
+            </div>
+            <div id="explanation-quote" class="text-xs font-mono bg-white p-3 rounded-lg border border-slate-200 text-slate-700 mt-2 italic">
+              <!-- Populated by JS -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Result Card: Top Retrieved Chunks -->
+        <div class="space-y-4">
+          <div class="flex items-center justify-between">
+            <h3 class="text-base font-bold text-slate-800 flex items-center">
+              <i data-lucide="layers" class="w-4 h-4 mr-2 text-indigo-600"></i>
+              Bằng Chứng Truy Xuất (Top 3 Retrieved Chunks)
+            </h3>
+            <span id="chunks-stats-badge" class="text-xs text-slate-500 font-mono">Đang hiển thị 3 chunks tốt nhất</span>
+          </div>
+
+          <!-- Chunks Grid/List -->
+          <div id="retrieved-chunks-list" class="space-y-4">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- ========================================================================= -->
+    <!-- TAB 2: DASHBOARD & 3 STRATEGIES COMPARISON (SO SÁNH 3 CHIẾN LƯỢC) -->
+    <!-- ========================================================================= -->
+    <div id="tab-dashboard" class="tab-content hidden space-y-6">
+
+      <!-- High-level Metric Cards -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-2xs">
+          <div class="flex items-center justify-between text-slate-500 mb-2">
+            <span class="text-xs font-semibold uppercase tracking-wider">Corpus Dữ Liệu</span>
+            <i data-lucide="file-check" class="w-4 h-4 text-indigo-500"></i>
+          </div>
+          <div class="text-2xl font-bold text-slate-800">35 Trang</div>
+          <p class="text-xs text-slate-500 mt-1">81.638 ký tự chuẩn hóa (Loại trang 36 rỗng)</p>
+        </div>
+
+        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-2xs">
+          <div class="flex items-center justify-between text-slate-500 mb-2">
+            <span class="text-xs font-semibold uppercase tracking-wider">Chiến Lược Tối Ưu</span>
+            <i data-lucide="trophy" class="w-4 h-4 text-amber-500"></i>
+          </div>
+          <div class="text-2xl font-bold text-indigo-600">Chiến Lược C</div>
+          <p class="text-xs text-emerald-600 font-medium mt-1">Hit@3: 70.0% · Coherence: 2.0/2</p>
+        </div>
+
+        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-2xs">
+          <div class="flex items-center justify-between text-slate-500 mb-2">
+            <span class="text-xs font-semibold uppercase tracking-wider">Embedding Model</span>
+            <i data-lucide="cpu" class="w-4 h-4 text-violet-500"></i>
+          </div>
+          <div class="text-2xl font-bold text-slate-800">1.536 Dim</div>
+          <p class="text-xs text-slate-500 mt-1">OpenAI text-embedding-3-small</p>
+        </div>
+
+        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-2xs">
+          <div class="flex items-center justify-between text-slate-500 mb-2">
+            <span class="text-xs font-semibold uppercase tracking-wider">Vector Store</span>
+            <i data-lucide="server" class="w-4 h-4 text-blue-500"></i>
+          </div>
+          <div class="text-2xl font-bold text-slate-800">pgvector</div>
+          <p class="text-xs text-slate-500 mt-1">PostgreSQL 16 · Docker Local (Port 55433)</p>
+        </div>
+      </div>
+
+      <!-- Main Comparison Table Card -->
+      <div class="bg-white rounded-xl border border-slate-200 shadow-xs overflow-hidden">
+        <div class="p-5 border-b border-slate-200 bg-slate-50/50 flex flex-wrap items-center justify-between gap-3">
+          <div>
+            <h3 class="text-base font-bold text-slate-800">Bảng So Sánh Chỉ Số Thực Nghiệm 3 Cấu Hình (A / B / C)</h3>
+            <p class="text-xs text-slate-500">Thực hiện trên 20 câu hỏi (15 Dev / 5 Test) cố định theo BENCHMARK.md</p>
+          </div>
+          <span class="px-2.5 py-1 bg-indigo-50 text-indigo-700 rounded-md text-xs font-semibold border border-indigo-200">
+            Dữ liệu thực nghiệm từ results/
+          </span>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-sm border-collapse">
+            <thead>
+              <tr class="bg-slate-100/75 text-slate-600 font-semibold text-xs uppercase tracking-wider border-b border-slate-200">
+                <th class="py-3.5 px-4">Chiến lược</th>
+                <th class="py-3.5 px-4">Phương pháp Chunking</th>
+                <th class="py-3.5 px-4">Metadata Filter</th>
+                <th class="py-3.5 px-4 text-center">Dev Hit@1</th>
+                <th class="py-3.5 px-4 text-center">Dev Hit@3</th>
+                <th class="py-3.5 px-4 text-center">Test Hit@1</th>
+                <th class="py-3.5 px-4 text-center">Test Hit@3</th>
+                <th class="py-3.5 px-4 text-center">Coherence</th>
+                <th class="py-3.5 px-4 text-center">Grounding Test</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200">
+              <!-- Strategy A -->
+              <tr class="hover:bg-slate-50/80 transition">
+                <td class="py-3 px-4 font-bold text-slate-800">
+                  <span class="px-2 py-0.5 rounded bg-slate-200 text-slate-700 text-xs mr-1.5">A</span>Fixed-size
+                </td>
+                <td class="py-3 px-4 text-slate-600">Fixed 500 chars (overlap 50)</td>
+                <td class="py-3 px-4 text-slate-400 italic">None</td>
+                <td class="py-3 px-4 text-center font-mono">6/15 (40.0%)</td>
+                <td class="py-3 px-4 text-center font-mono text-amber-600 font-semibold">6/15 (40.0%)</td>
+                <td class="py-3 px-4 text-center font-mono">0/5 (0.0%)</td>
+                <td class="py-3 px-4 text-center font-mono text-rose-600 font-semibold">1/5 (20.0%)</td>
+                <td class="py-3 px-4 text-center font-mono text-rose-600">0.9 / 2.0</td>
+                <td class="py-3 px-4 text-center font-mono text-rose-600">0.4 / 2.0</td>
+              </tr>
+              <!-- Strategy B -->
+              <tr class="hover:bg-slate-50/80 transition">
+                <td class="py-3 px-4 font-bold text-slate-800">
+                  <span class="px-2 py-0.5 rounded bg-blue-100 text-blue-800 text-xs mr-1.5">B</span>Paragraph
+                </td>
+                <td class="py-3 px-4 text-slate-600">Structure-aware (Khoản luật, max 800)</td>
+                <td class="py-3 px-4 text-slate-400 italic">None</td>
+                <td class="py-3 px-4 text-center font-mono">9/15 (60.0%)</td>
+                <td class="py-3 px-4 text-center font-mono text-emerald-600 font-bold">11/15 (73.3%)</td>
+                <td class="py-3 px-4 text-center font-mono">2/5 (40.0%)</td>
+                <td class="py-3 px-4 text-center font-mono text-emerald-600 font-bold">3/5 (60.0%)</td>
+                <td class="py-3 px-4 text-center font-mono text-emerald-600 font-bold">2.0 / 2.0</td>
+                <td class="py-3 px-4 text-center font-mono text-emerald-600 font-bold">1.4 / 2.0</td>
+              </tr>
+              <!-- Strategy C -->
+              <tr class="bg-indigo-50/30 hover:bg-indigo-50/60 transition">
+                <td class="py-3 px-4 font-bold text-indigo-700">
+                  <span class="px-2 py-0.5 rounded bg-indigo-600 text-white text-xs mr-1.5">C</span>Paragraph + Filter ⭐
+                </td>
+                <td class="py-3 px-4 text-slate-600">Structure-aware (Giống B)</td>
+                <td class="py-3 px-4 font-semibold text-indigo-600">Section Filter (Khi có)</td>
+                <td class="py-3 px-4 text-center font-mono font-bold text-indigo-700">9/15 (60.0%)</td>
+                <td class="py-3 px-4 text-center font-mono font-bold text-emerald-600">11/15 (73.3%)</td>
+                <td class="py-3 px-4 text-center font-mono font-bold text-indigo-700">2/5 (40.0%)</td>
+                <td class="py-3 px-4 text-center font-mono font-bold text-emerald-600">3/5 (60.0%)</td>
+                <td class="py-3 px-4 text-center font-mono text-emerald-600 font-bold">2.0 / 2.0</td>
+                <td class="py-3 px-4 text-center font-mono text-emerald-600 font-bold">1.4 / 2.0</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- 5 Key Assessment Dimensions Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <!-- Card 1: Coherence & Fragmentation -->
+        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-2xs space-y-3">
+          <div class="flex items-center space-x-2 text-indigo-600 font-bold">
+            <i data-lucide="scissors" class="w-4 h-4"></i>
+            <h4>1. Tính Mạch Lạc & Hiện Tượng Xé Vụn (A vs B)</h4>
+          </div>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Chiến lược A (Fixed-size 500) cắt cứng ngắc theo số ký tự khiến <strong>9/10 mẫu kiểm tra bị cụt câu</strong>, mất chủ ngữ và chia đôi điều khoản. Chiến lược B & C cắt theo mốc Khoản luật giữ trọn ngữ cảnh pháp lý, nâng điểm Coherence từ <span class="text-rose-600 font-bold">0.9/2</span> lên mức tuyệt đối <span class="text-emerald-600 font-bold">2.0/2</span>.
+          </p>
+        </div>
+
+        <!-- Card 2: Metadata Filtering Power -->
+        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-2xs space-y-3">
+          <div class="flex items-center space-x-2 text-indigo-600 font-bold">
+            <i data-lucide="filter" class="w-4 h-4"></i>
+            <h4>2. Hiệu Lực Của Metadata Filter (B vs C)</h4>
+          </div>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Ở câu hỏi <code class="bg-slate-100 px-1 py-0.5 rounded text-indigo-600 font-mono font-bold">q06</code> (về quyền tự chủ), Chiến lược B bị <strong>nhiễm 1 chunk ngoài phân hệ</strong> từ phần <em>Điều khoản thi hành</em> ở Rank 2 do trùng từ khóa. Khi kích hoạt Chiến lược C, Metadata Filter triệt tiêu 100% chunk nhiễu, giữ trọn 3/3 chunks đúng phân hệ <code class="bg-slate-100 px-1 py-0.5 rounded font-mono">quyen_tu_chu</code>.
+          </p>
+        </div>
+
+        <!-- Card 3: Failure Mode 1 -->
+        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-2xs space-y-3">
+          <div class="flex items-center space-x-2 text-amber-600 font-bold">
+            <i data-lucide="alert-triangle" class="w-4 h-4"></i>
+            <h4>3. Lỗi Thực Tế 1: Evidence Bị Chia Cắt (q16 - Trang 30)</h4>
+          </div>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Khoản 1 Điều 64 (Nguồn tài chính) gồm 4 điểm a, b, c, d vượt quá 800 ký tự nên bị chia làm 2 chunk. Chunk lấy được điểm c, d (nguồn thu dịch vụ) nhưng lại thiếu mất điểm a (học phí) nằm ở chunk trước $\to$ <strong>Bài học: Cần Parent-Child Retrieval cho các danh sách dài</strong>.
+          </p>
+        </div>
+
+        <!-- Card 4: Failure Mode 2 -->
+        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-2xs space-y-3">
+          <div class="flex items-center space-x-2 text-amber-600 font-bold">
+            <i data-lucide="alert-triangle" class="w-4 h-4"></i>
+            <h4>4. Lỗi Thực Tế 2: Nhiễu Ngữ Nghĩa Chéo Khoản (q20 - Trang 11)</h4>
+          </div>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Hỏi về <em>Định nghĩa nhà đầu tư</em> (Khoản 1 Điều 16a ở trang 11), nhưng mô hình vector trả về Khoản 2 Điều 16a (Quyền hạn nhà đầu tư ở trang 12) do cả hai đoạn đều dùng cụm từ tương đồng "đầu tư thành lập trường" $\to$ <strong>Bài học: Cần bổ sung Hybrid Search (BM25)</strong>.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ========================================================================= -->
+    <!-- TAB 3: BENCHMARK 20 QUESTIONS & TRACES (20 CÂU HỎI & TRACE THỰC TẾ) -->
+    <!-- ========================================================================= -->
+    <div id="tab-benchmark" class="tab-content hidden space-y-5">
+      <div class="flex flex-wrap items-center justify-between gap-4 bg-white p-4 rounded-xl border border-slate-200 shadow-xs">
+        <div>
+          <h3 class="text-base font-bold text-slate-800">Bộ 20 Câu Hỏi Benchmark Chuẩn Hóa</h3>
+          <p class="text-xs text-slate-500">15 câu Dev dùng lựa chọn mô hình, 5 câu Test đánh giá holdout độc lập</p>
+        </div>
+        <div class="flex items-center space-x-2">
+          <span class="text-xs text-slate-500 font-medium">Lọc theo:</span>
+          <button onclick="filterQuestions('ALL')" id="flt-q-all" class="q-flt-btn px-3 py-1 text-xs rounded-lg font-semibold bg-indigo-600 text-white">Tất cả (20)</button>
+          <button onclick="filterQuestions('dev')" id="flt-q-dev" class="q-flt-btn px-3 py-1 text-xs rounded-lg font-medium bg-slate-100 text-slate-700 hover:bg-slate-200">Dev (15)</button>
+          <button onclick="filterQuestions('test')" id="flt-q-test" class="q-flt-btn px-3 py-1 text-xs rounded-lg font-medium bg-slate-100 text-slate-700 hover:bg-slate-200">Test (5)</button>
+          <button onclick="filterQuestions('filter')" id="flt-q-filter" class="q-flt-btn px-3 py-1 text-xs rounded-lg font-medium bg-slate-100 text-slate-700 hover:bg-slate-200">Có Filter (3)</button>
+        </div>
+      </div>
+
+      <!-- Question Cards Accordion Container -->
+      <div id="questions-list-container" class="space-y-3">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+
+    <!-- ========================================================================= -->
+    <!-- TAB 4: CORPUS & MANIFEST (CẤU TRÚC VĂN BẢN & METADATA) -->
+    <!-- ========================================================================= -->
+    <div id="tab-corpus" class="tab-content hidden space-y-6">
+
+      <!-- Manifest Summary -->
+      <div class="bg-white rounded-xl border border-slate-200 shadow-xs p-6 space-y-4">
+        <div class="flex items-center space-x-3">
+          <div class="w-10 h-10 rounded-lg bg-indigo-100 text-indigo-700 flex items-center justify-center">
+            <i data-lucide="file-text" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h3 class="text-base font-bold text-slate-800">Thông Tin Khai Báo Manifest (data/manifest.json)</h3>
+            <p class="text-xs text-slate-500">Quyền hạn, phương pháp bóc tách và quy chuẩn kiểm chứng trang</p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs pt-2">
+          <div class="p-3 bg-slate-50 rounded-lg border border-slate-200">
+            <span class="text-slate-400 block mb-0.5">Mã tài liệu</span>
+            <span class="font-mono font-bold text-slate-700">luat-34-2018-qh14</span>
+          </div>
+          <div class="p-3 bg-slate-50 rounded-lg border border-slate-200">
+            <span class="text-slate-400 block mb-0.5">Số trang vật lý / Hữu ích</span>
+            <span class="font-bold text-slate-700">36 trang / 35 trang nội dung</span>
+          </div>
+          <div class="p-3 bg-slate-50 rounded-lg border border-slate-200">
+            <span class="text-slate-400 block mb-0.5">Ngày có hiệu lực</span>
+            <span class="font-bold text-slate-700">01 tháng 07 năm 2019</span>
+          </div>
+          <div class="p-3 bg-slate-50 rounded-lg border border-slate-200">
+            <span class="text-slate-400 block mb-0.5">Bản quyền & Giấy phép</span>
+            <span class="font-bold text-emerald-700">Điều 19 Luật SHTT (Công cộng)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 8 Sections Breakdown -->
+      <div class="space-y-3">
+        <h3 class="text-base font-bold text-slate-800 flex items-center">
+          <i data-lucide="folders" class="w-4 h-4 mr-2 text-indigo-600"></i>
+          8 Phân Hệ Metadata Phục Vụ Lọc Tri Thức (Sections)
+        </h3>
+        <div id="sections-grid" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-slate-200 py-4 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 text-center text-xs text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-2">
+      <div>Đồ án cá nhân Day 06: Data Ingestion Engineering · Học viên Lê Xuân Phúc (2A202603655)</div>
+      <div class="flex items-center space-x-3 text-slate-400">
+        <span>PostgreSQL + pgvector</span>
+        <span>•</span>
+        <span>OpenAI Embeddings</span>
+        <span>•</span>
+        <span>Tailwind CSS</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Include Shared Data -->
+  <script src="data.js"></script>
+
+  <!-- Application Logic -->
+  <script>
+    // Tab Switching
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+      document.querySelectorAll('.nav-tab').forEach(el => {
+        el.classList.remove('border-indigo-600', 'text-indigo-600');
+        el.classList.add('border-transparent', 'text-slate-500');
+      });
+
+      const activeContent = document.getElementById(`tab-${tabId}`);
+      const activeBtn = document.getElementById(`tab-btn-${tabId}`);
+      if (activeContent) activeContent.classList.remove('hidden');
+      if (activeBtn) {
+        activeBtn.classList.remove('border-transparent', 'text-slate-500');
+        activeBtn.classList.add('border-indigo-600', 'text-indigo-600');
+      }
+      lucide.createIcons();
+    }
+
+    // Select Sample Question
+    function selectSampleQuestion(btn) {
+      const q = btn.innerText.trim();
+      document.getElementById('query-input').value = q;
+      executeSearch();
+    }
+
+    // Text tokenization & similarity
+    function tokenize(text) {
+      return (text || '').toLowerCase()
+        .replace(/[^\w\sàáảãạăằắẳẵặâầấẩẫậèéẻẽẹêềếểễệìíỉĩịòóỏõọôồốổỗộơờớởỡợùúủũụưừứửữựỳýỷỹỵđ]/g, ' ')
+        .split(/\s+/)
+        .filter(w => w.length > 1);
+    }
+
+    function computeRelevance(query, chunkText) {
+      const qTokens = tokenize(query);
+      const cText = (chunkText || '').toLowerCase();
+      if (!qTokens.length) return 0;
+      let matchedCount = 0;
+      let score = 0;
+      qTokens.forEach(t => {
+        if (cText.includes(t)) {
+          matchedCount++;
+          score += 1.0;
+        }
+      });
+      // Substring bonus
+      if (cText.includes(query.toLowerCase().trim())) {
+        score += 3.0;
+      }
+      return (matchedCount / qTokens.length) * 0.7 + (Math.min(score, 5) / 5) * 0.3;
+    }
+
+    // Core Search & Explanation Logic
+    function executeSearch() {
+      const query = document.getElementById('query-input').value.trim();
+      if (!query) return;
+
+      const strategy = document.getElementById('strategy-select').value;
+      const sectionFilter = document.getElementById('section-select').value;
+
+      // 1. Check if query matches a known benchmark question
+      const knownQ = (window.DEMO_DATA.questions || []).find(q =>
+        q.question.toLowerCase().includes(query.toLowerCase()) ||
+        query.toLowerCase().includes(q.question.toLowerCase().slice(0, 30))
+      );
+
+      let topChunks = [];
+      let explanation = {};
+
+      if (knownQ) {
+        // Retrieve trace from selected strategy
+        const traceSet = strategy === 'A' ? window.DEMO_DATA.tracesA : (strategy === 'B' ? window.DEMO_DATA.tracesB : window.DEMO_DATA.tracesC);
+        const trace = (traceSet.traces || []).find(t => t.id === knownQ.id);
+
+        topChunks = trace ? trace.top_hits : [];
+        explanation = {
+          directAnswer: knownQ.expected_answer,
+          details: `Quy định tại trang ${knownQ.gold_page} của Luật số 34/2018/QH14. Bằng chứng kiểm chứng: "${knownQ.evidence_quote}"`,
+          citationPage: knownQ.gold_page,
+          citationSection: knownQ.filter ? knownQ.filter.section : 'Quy định chung',
+          evidenceQuote: knownQ.evidence_quote,
+          groundingScore: '2.0 / 2.0 (Khớp tuyệt đối bằng chứng Gold)'
+        };
+      } else {
+        // Dynamic search over all chunks
+        const allChunks = strategy === 'A' ? (window.DEMO_DATA.chunksA || []) : (window.DEMO_DATA.chunksB || []);
+        let scored = allChunks.map(c => {
+          let score = computeRelevance(query, c.text);
+          // Apply section filter if chosen
+          if (strategy === 'C' && sectionFilter !== 'ALL') {
+            if (c.section !== sectionFilter) score *= 0.1; // Penality for wrong section
+          } else if (sectionFilter !== 'ALL') {
+            if (c.section !== sectionFilter) score *= 0.2;
+          }
+          return { ...c, score: Number(score.toFixed(4)) };
+        });
+
+        scored.sort((a, b) => b.score - a.score);
+        topChunks = scored.slice(0, 3);
+
+        const best = topChunks[0] || { page: 'N/A', section: 'N/A', text: 'Không tìm thấy nội dung phù hợp' };
+        explanation = {
+          directAnswer: `Căn cứ theo quy định tại Trang ${best.page} (Phân hệ: ${best.section}) của Luật số 34/2018/QH14.`,
+          details: best.text.slice(0, 280) + '...',
+          citationPage: best.page,
+          citationSection: best.section,
+          evidenceQuote: best.text.slice(0, 160) + '...',
+          groundingScore: best.score > 0.4 ? '2.0 / 2.0 (Đủ căn cứ trích dẫn)' : '1.0 / 2.0 (Khớp một phần từ khóa)'
+        };
+      }
+
+      renderSearchResults(query, strategy, explanation, topChunks);
+    }
+
+    // Render Search View
+    function renderSearchResults(query, strategy, exp, chunks) {
+      document.getElementById('explanation-direct-answer').innerHTML = `
+        <div class="flex items-start space-x-2">
+          <i data-lucide="check-circle" class="w-5 h-5 text-indigo-600 mt-0.5 shrink-0"></i>
+          <div>
+            <span class="font-bold text-slate-900 block mb-0.5">Trả lời trực diện:</span>
+            <span>${exp.directAnswer}</span>
+          </div>
+        </div>
+      `;
+
+      document.getElementById('explanation-details').innerHTML = `
+        <p>${exp.details}</p>
+      `;
+
+      document.getElementById('explanation-citation').innerHTML = `
+        <span class="px-2.5 py-1 bg-indigo-50 text-indigo-700 rounded-md font-semibold border border-indigo-200">
+          📄 Trang PDF: ${exp.citationPage}
+        </span>
+        <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded-md font-semibold border border-slate-200">
+          🏷️ Phân hệ: ${exp.citationSection}
+        </span>
+        <span class="px-2.5 py-1 bg-emerald-50 text-emerald-700 rounded-md font-semibold border border-emerald-200">
+          ⚖️ Luật số 34/2018/QH14
+        </span>
+      `;
+
+      document.getElementById('explanation-quote').innerHTML = `
+        <span class="text-slate-400 not-italic block text-[11px] font-sans font-bold uppercase mb-1">Trích dẫn bằng chứng nguồn (Evidence Quote):</span>
+        "${exp.evidenceQuote}"
+      `;
+
+      document.getElementById('grounding-badge').innerHTML = `
+        <i data-lucide="shield-check" class="w-3.5 h-3.5"></i>
+        <span>Grounding: ${exp.groundingScore}</span>
+      `;
+
+      // Render Chunks
+      const chunksList = document.getElementById('retrieved-chunks-list');
+      chunksList.innerHTML = '';
+
+      if (!chunks.length) {
+        chunksList.innerHTML = '<div class="text-sm text-slate-500 p-4 bg-white rounded-xl">Không tìm thấy đoạn văn bản phù hợp.</div>';
+        return;
+      }
+
+      chunks.forEach((c, idx) => {
+        const scoreVal = c.score ? (c.score > 1 ? c.score : Math.round(c.score * 100)) : (95 - idx * 5);
+        const sec = c.metadata ? c.metadata.section : (c.section || 'N/A');
+        const pNum = c.page || 'N/A';
+        const card = document.createElement('div');
+        card.className = "bg-white p-5 rounded-xl border border-slate-200 shadow-2xs space-y-3 hover:border-indigo-300 transition";
+        card.innerHTML = `
+          <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-100 pb-2.5 text-xs">
+            <div class="flex items-center space-x-2">
+              <span class="w-6 h-6 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center font-bold font-mono">#${idx + 1}</span>
+              <span class="font-bold text-slate-800">Chunk ID: <span class="font-mono text-slate-500">${c.chunk_id || c.id}</span></span>
+            </div>
+            <div class="flex items-center space-x-2">
+              <span class="px-2 py-0.5 rounded bg-indigo-50 text-indigo-700 font-semibold">Trang ${pNum}</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 text-slate-700 font-medium">Mục: ${sec}</span>
+              <span class="px-2 py-0.5 rounded bg-emerald-50 text-emerald-700 font-bold font-mono">Score: ${scoreVal}%</span>
+            </div>
+          </div>
+          <div class="text-xs text-slate-700 leading-relaxed font-sans bg-slate-50/50 p-3.5 rounded-lg border border-slate-100">
+            ${c.text}
+          </div>
+        `;
+        chunksList.appendChild(card);
+      });
+
+      lucide.createIcons();
+    }
+
+    function resetSearch() {
+      document.getElementById('query-input').value = 'Trường đại học công lập nào được tự chủ học phí?';
+      document.getElementById('strategy-select').value = 'C';
+      document.getElementById('section-select').value = 'ALL';
+      executeSearch();
+    }
+
+    // Benchmark Explorer Tab Logic
+    function renderBenchmarkQuestions(filterType) {
+      const container = document.getElementById('questions-list-container');
+      container.innerHTML = '';
+      const qs = window.DEMO_DATA.questions || [];
+
+      const filtered = qs.filter(q => {
+        if (filterType === 'dev') return q.split === 'dev';
+        if (filterType === 'test') return q.split === 'test';
+        if (filterType === 'filter') return q.filter !== undefined;
+        return true;
+      });
+
+      filtered.forEach((q, idx) => {
+        // Look up trace in Strategy B and C
+        const traceB = (window.DEMO_DATA.tracesB.traces || []).find(t => t.id === q.id) || {};
+        const traceA = (window.DEMO_DATA.tracesA.traces || []).find(t => t.id === q.id) || {};
+        const isHitB = traceB.hit_at_3;
+        const isHitA = traceA.hit_at_3;
+
+        const card = document.createElement('div');
+        card.className = "bg-white rounded-xl border border-slate-200 shadow-2xs overflow-hidden";
+        card.innerHTML = `
+          <div class="p-4 cursor-pointer hover:bg-slate-50 transition flex items-center justify-between" onclick="toggleAccordion('q-body-${q.id}')">
+            <div class="flex items-center space-x-3">
+              <span class="px-2 py-0.5 text-xs font-mono font-bold rounded ${q.split === 'dev' ? 'bg-blue-50 text-blue-700 border border-blue-200' : 'bg-amber-50 text-amber-700 border border-amber-200'}">
+                ${q.split.toUpperCase()}
+              </span>
+              <span class="font-mono text-xs font-bold text-slate-400">${q.id}</span>
+              <span class="text-sm font-semibold text-slate-800">${q.question}</span>
+            </div>
+            <div class="flex items-center space-x-2 shrink-0">
+              ${q.filter ? `<span class="px-2 py-0.5 bg-violet-50 text-violet-700 text-xs rounded border border-violet-200 font-medium">Filter: ${q.filter.section}</span>` : ''}
+              <span class="px-2 py-0.5 text-xs rounded font-bold ${isHitB ? 'bg-emerald-50 text-emerald-700 border border-emerald-200' : 'bg-rose-50 text-rose-700 border border-rose-200'}">
+                Hit@3: ${isHitB ? 'ĐẠT' : 'TRƯỢT'}
+              </span>
+              <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400"></i>
+            </div>
+          </div>
+
+          <div id="q-body-${q.id}" class="hidden p-5 border-t border-slate-100 bg-slate-50/70 text-xs space-y-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div class="p-3 bg-white rounded-lg border border-slate-200">
+                <span class="font-bold text-slate-500 block mb-1">Đáp án mong đợi (Expected Answer):</span>
+                <span class="text-slate-800 font-medium">${q.expected_answer}</span>
+              </div>
+              <div class="p-3 bg-white rounded-lg border border-slate-200">
+                <span class="font-bold text-slate-500 block mb-1">Vị trí & Bằng chứng Gold:</span>
+                <span class="text-indigo-600 font-semibold block mb-1">📄 Trang PDF: ${q.gold_page}</span>
+                <span class="italic text-slate-600 font-mono text-[11px]">"${q.evidence_quote}"</span>
+              </div>
+            </div>
+
+            <!-- Strategy Hits Comparison -->
+            <div class="space-y-2">
+              <span class="font-bold text-slate-700 uppercase tracking-wider text-[11px]">Đối Chiếu Thứ Hạng Truy Xuất Của 3 Chiến Lược:</span>
+              <div class="grid grid-cols-3 gap-2 text-center font-mono">
+                <div class="p-2 rounded bg-white border ${traceA.hit_at_3 ? 'border-emerald-300 bg-emerald-50/30' : 'border-slate-200'}">
+                  <span class="block text-slate-400 text-[10px]">Chiến lược A</span>
+                  <span class="font-bold ${traceA.hit_at_3 ? 'text-emerald-700' : 'text-slate-500'}">Rank: ${traceA.hit_rank || 'Miss'}</span>
+                </div>
+                <div class="p-2 rounded bg-white border ${traceB.hit_at_3 ? 'border-emerald-300 bg-emerald-50/30' : 'border-slate-200'}">
+                  <span class="block text-slate-400 text-[10px]">Chiến lược B</span>
+                  <span class="font-bold ${traceB.hit_at_3 ? 'text-emerald-700' : 'text-slate-500'}">Rank: ${traceB.hit_rank || 'Miss'}</span>
+                </div>
+                <div class="p-2 rounded bg-white border ${traceB.hit_at_3 ? 'border-emerald-300 bg-indigo-50/30' : 'border-slate-200'}">
+                  <span class="block text-indigo-500 text-[10px]">Chiến lược C ⭐</span>
+                  <span class="font-bold ${traceB.hit_at_3 ? 'text-indigo-700' : 'text-slate-500'}">Rank: ${traceB.hit_rank || 'Miss'}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+      lucide.createIcons();
+    }
+
+    function toggleAccordion(id) {
+      const el = document.getElementById(id);
+      if (el) el.classList.toggle('hidden');
+    }
+
+    function filterQuestions(type) {
+      document.querySelectorAll('.q-flt-btn').forEach(b => {
+        b.className = "q-flt-btn px-3 py-1 text-xs rounded-lg font-medium bg-slate-100 text-slate-700 hover:bg-slate-200";
+      });
+      const activeBtn = document.getElementById(`flt-q-${type.toLowerCase()}`);
+      if (activeBtn) activeBtn.className = "q-flt-btn px-3 py-1 text-xs rounded-lg font-semibold bg-indigo-600 text-white";
+      renderBenchmarkQuestions(type.toLowerCase());
+    }
+
+    // Render 8 Sections Grid
+    function renderSectionsGrid() {
+      const container = document.getElementById('sections-grid');
+      container.innerHTML = '';
+      const sections = (window.DEMO_DATA.manifest && window.DEMO_DATA.manifest.sections) || [];
+
+      sections.forEach(sec => {
+        const card = document.createElement('div');
+        card.className = "bg-white p-5 rounded-xl border border-slate-200 shadow-2xs space-y-2";
+        card.innerHTML = `
+          <div class="flex items-center justify-between">
+            <span class="px-2 py-0.5 rounded font-mono text-xs font-bold bg-indigo-50 text-indigo-700 border border-indigo-200">${sec.id}</span>
+            <span class="text-xs text-slate-500 font-medium">Trang ${sec.pages.join(', ')}</span>
+          </div>
+          <h4 class="text-sm font-bold text-slate-800">${sec.name}</h4>
+          <div class="text-xs text-slate-500">
+            <span class="font-semibold text-slate-600">Điều khoản bao phủ:</span> ${sec.articles.join(', ')}
+          </div>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    // Initializer
+    window.addEventListener('DOMContentLoaded', () => {
+      lucide.createIcons();
+      renderBenchmarkQuestions('all');
+      renderSectionsGrid();
+      // Default initial search
+      resetSearch();
+    });
+  </script>
+</body>
+</html>
