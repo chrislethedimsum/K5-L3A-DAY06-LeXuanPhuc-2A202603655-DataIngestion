@@ -1,0 +1,211 @@
+[
+  {
+    "id": "q01",
+    "split": "dev",
+    "type": "truc_tiep",
+    "question": "Theo Luật sửa đổi, bổ sung Luật Giáo dục đại học 2018, trường đại học hoặc học viện được định nghĩa như thế nào?",
+    "expected_answer": "Trường đại học, học viện là cơ sở giáo dục đại học đào tạo, nghiên cứu nhiều ngành, được cơ cấu tổ chức theo quy định của Luật này.",
+    "gold_source_id": "luat-34-2018-qh14",
+    "gold_page": 1,
+    "evidence_quote": "Trường đại học, học viện (sau đây gọi chung là trường đại học) là cơ sở giáo dục đại học đào tạo, nghiên cứu nhiều ngành, được cơ cấu tổ chức theo quy định của Luật này."
+  },
+  {
+    "id": "q02",
+    "split": "dev",
+    "type": "truc_tiep",
+    "question": "Các hình thức đào tạo để cấp văn bằng các trình độ đào tạo của giáo dục đại học bao gồm những hình thức nào?",
+    "expected_answer": "Bao gồm chính quy, vừa làm vừa học, đào tạo từ xa.",
+    "gold_source_id": "luat-34-2018-qh14",
+    "gold_page": 3,
+    "evidence_quote": "Hình thức đào tạo để cấp văn bằng các trình độ đào tạo của giáo dục đại học bao gồm chính quy, vừa làm vừa học, đào tạo từ xa."
+  },
+  {
+    "id": "q03",
+    "split": "dev",
+    "type": "truc_tiep",
+    "question": "Hội đồng trường của trường đại học công lập là tổ chức gì và đại diện cho ai?",
+    "expected_answer": "Hội đồng trường của trường đại học công lập là tổ chức quản trị, thực hiện quyền đại diện của chủ sở hữu và các bên có lợi ích liên quan.",
+    "gold_source_id": "luat-34-2018-qh14",
+    "gold_page": 7,
+    "evidence_quote": "Hội đồng trường của trường đại học công lập là tổ chức quản trị, thực hiện quyền đại diện của chủ sở hữu và các bên có lợi ích liên quan."
+  },
+  {
+    "id": "q04",
+    "split": "dev",
+    "type": "dieu_kien_ngoai_le",
+    "question": "Tiêu chuẩn cơ bản về trình độ học vấn và kinh nghiệm quản lý đối với Hiệu trưởng cơ sở giáo dục đại học là gì?",
+    "expected_answer": "Có trình độ tiến sĩ đối với hiệu trưởng trường đại học, giám đốc đại học; có phẩm chất chính trị, đạo đức tốt, có đủ sức khỏe, có uy tín khoa học và kinh nghiệm quản lý GDĐH.",
+    "gold_source_id": "luat-34-2018-qh14",
+    "gold_page": 17,
+    "evidence_quote": "Tiêu chuẩn hiệu trưởng cơ sở giáo dục đại học được quy định như sau: a) Có phẩm chất chính trị, đạo đức tốt, có trình độ tiến sĩ, có đủ sức khỏe để thực hiện nhiệm vụ, có uy tín khoa học và kinh nghiệm quản lý giáo dục đại học"
+  },
+  {
+    "id": "q05",
+    "split": "dev",
+    "type": "truc_tiep",
+    "question": "Cơ sở giáo dục đại học thực hiện quyền tự chủ và trách nhiệm giải trình theo quy định nào?",
+    "expected_answer": "Cơ sở giáo dục đại học thực hiện quyền tự chủ và trách nhiệm giải trình theo quy định của pháp luật; các cơ quan, tổ chức, cá nhân có trách nhiệm tôn trọng và bảo đảm quyền tự chủ.",
+    "gold_source_id": "luat-34-2018-qh14",
+    "gold_page": 19,
+    "evidence_quote": "Cơ sở giáo dục đại học thực hiện quyền tự chủ và trách nhiệm giải trình theo quy định của pháp luật."
+  },
+  {
+    "id": "q06",
+    "split": "dev",
+    "type": "metadata_filter",
+    "filter": {
+      "section": "quyen_tu_chu"
+    },
+    "question": "Để được thực hiện quyền tự chủ, cơ sở giáo dục đại học phải đáp ứng những điều kiện tiên quyết nào?",
+    "expected_answer": "Đã thành lập hội đồng trường/đại học; đạt chuẩn kiểm định chất lượng cơ sở GDĐH; ban hành và thực hiện quy chế tổ chức, hoạt động, quy chế tài chính; phân quyền và công khai thông tin.",
+    "gold_source_id": "luat-34-2018-qh14",
+    "gold_page": 20,
+    "evidence_quote": "Đã thành lập hội đồng trường, hội đồng đại học; đã được công nhận đạt chuẩn chất lượng cơ sở giáo dục đại học bởi tổ chức kiểm định chất lượng giáo dục hợp pháp"
+  },
+  {
+    "id": "q07",
+    "split": "dev",
+    "type": "dieu_kien_ngoai_le",
+    "question": "Khi nào cơ sở giáo dục đại học được quyền tự chủ mở ngành đào tạo trình độ đại học?",
+    "expected_answer": "Khi đáp ứng điều kiện tự chủ (khoản 2 Điều 32) và các điều kiện về nhu cầu nhân lực, đội ngũ giảng viên, cơ sở vật chất, chương trình đào tạo theo quy định.",
+    "gold_source_id": "luat-34-2018-qh14",
+    "gold_page": 21,
+    "evidence_quote": "Cơ sở giáo dục đại học đáp ứng điều kiện quy định tại khoản 1, khoản 2 Điều này và khoản 2 Điều 32 của Luật này được tự chủ mở ngành đào tạo trình độ đại học"
+  },
+  {
+    "id": "q08",
+    "split": "dev",
+    "type": "dien_dat_lai",
+    "question": "Chỉ tiêu tuyển sinh của cơ sở giáo dục đại học được xác định dựa trên những căn cứ nào?",
+    "expected_answer": "Xác định theo ngành/nhóm ngành trên cơ sở nhu cầu thị trường lao động, phát triển KT-XH, số lượng/chất lượng giảng viên, cơ sở vật chất và tỷ lệ việc làm của sinh viên tốt nghiệp.",
+    "gold_source_id": "luat-34-2018-qh14",
+    "gold_page": 22,
+    "evidence_quote": "Chỉ tiêu tuyển sinh được xác định theo ngành, nhóm ngành đào tạo trên cơ sở nhu cầu lao động của thị trường, yêu cầu phát triển kinh tế - xã hội"
+  },
+  {
+    "id": "q09",
+    "split": "dev",
+    "type": "truc_tiep",
+    "question": "Hệ thống văn bằng giáo dục đại học thuộc hệ thống giáo dục quốc dân bao gồm các loại bằng nào?",
+    "expected_answer": "Bao gồm bằng cử nhân, bằng thạc sĩ, bằng tiến sĩ và văn bằng trình độ tương đương.",
+    "gold_source_id": "luat-34-2018-qh14",
+    "gold_page": 24,
+    "evidence_quote": "Văn bằng giáo dục đại học thuộc hệ thống giáo dục quốc dân bao gồm bằng cử nhân, bằng thạc sĩ, bằng tiến sĩ và văn bằng trình độ tương đương"
+  },
+  {
+    "id": "q10",
+    "split": "dev",
+    "type": "dieu_kien_ngoai_le",
+    "question": "Lĩnh vực nào bị pháp luật cấm không được thực hiện liên kết đào tạo cấp bằng?",
+    "expected_answer": "Không thực hiện liên kết đào tạo đối với các ngành thuộc lĩnh vực sức khỏe có cấp chứng chỉ hành nghề.",
+    "gold_source_id": "luat-34-2018-qh14",
+    "gold_page": 24,
+    "evidence_quote": "không thực hiện liên kết đào tạo đối với các ngành thuộc lĩnh vực sức khỏe có cấp chứng chỉ hành nghề"
+  },
+  {
+    "id": "q11",
+    "split": "dev",
+    "type": "metadata_filter",
+    "filter": {
+      "section": "hoat_dong_dao_tao"
+    },
+    "question": "Hoạt động liên kết đào tạo với nước ngoài có được hình thành pháp nhân mới hay không?",
+    "expected_answer": "Không hình thành pháp nhân mới.",
+    "gold_source_id": "luat-34-2018-qh14",
+    "gold_page": 25,
+    "evidence_quote": "Liên kết đào tạo với nước ngoài là việc hợp tác đào tạo giữa cơ sở giáo dục đại học được thành lập ở Việt Nam với cơ sở giáo dục đại học nước ngoài"
+  },
+  {
+    "id": "q12",
+    "split": "dev",
+    "type": "truc_tiep",
+    "question": "Kiểm định chất lượng giáo dục đại học phải tuân thủ những nguyên tắc nào?",
+    "expected_answer": "Ba nguyên tắc: a) Độc lập, khách quan, đúng pháp luật; b) Trung thực, công khai, minh bạch; c) Bình đẳng, bắt buộc, định kỳ.",
+    "gold_source_id": "luat-34-2018-qh14",
+    "gold_page": 27,
+    "evidence_quote": "Nguyên tắc kiểm định chất lượng giáo dục đại học được quy định như sau: a) Độc lập, khách quan, đúng pháp luật; b) Trung thực, công khai, minh bạch; c) Bình đẳng, bắt buộc, định kỳ"
+  },
+  {
+    "id": "q13",
+    "split": "dev",
+    "type": "dien_dat_lai",
+    "question": "Mục tiêu của việc kiểm định chất lượng giáo dục đại học là gì?",
+    "expected_answer": "Bảo đảm và nâng cao chất lượng; xác nhận mức độ đáp ứng mục tiêu; làm căn cứ giải trình xã hội; làm cơ sở cho người học chọn trường và nhà tuyển dụng chọn nhân lực.",
+    "gold_source_id": "luat-34-2018-qh14",
+    "gold_page": 27,
+    "evidence_quote": "Mục tiêu của kiểm định chất lượng giáo dục đại học được quy định như sau: a) Bảo đảm và nâng cao chất lượng giáo dục đại học; b) Xác nhận mức độ đáp ứng mục tiêu của cơ sở giáo dục đại học hoặc chương trình đào tạo trong từng giai đoạn"
+  },
+  {
+    "id": "q14",
+    "split": "dev",
+    "type": "truc_tiep",
+    "question": "Chức danh giảng viên trong cơ sở giáo dục đại học bao gồm những ngạch, chức danh nào?",
+    "expected_answer": "Bao gồm trợ giảng, giảng viên, giảng viên chính, phó giáo sư, giáo sư.",
+    "gold_source_id": "luat-34-2018-qh14",
+    "gold_page": 29,
+    "evidence_quote": "Chức danh giảng viên bao gồm trợ giảng, giảng viên, giảng viên chính, phó giáo sư, giáo sư"
+  },
+  {
+    "id": "q15",
+    "split": "dev",
+    "type": "dieu_kien_ngoai_le",
+    "question": "Trình độ chuẩn tối thiểu để giảng dạy trình độ đại học và sau đại học được quy định như thế nào?",
+    "expected_answer": "Giảng dạy đại học tối thiểu là thạc sĩ (trừ trợ giảng); giảng dạy trình độ thạc sĩ, tiến sĩ phải có trình độ tiến sĩ.",
+    "gold_source_id": "luat-34-2018-qh14",
+    "gold_page": 29,
+    "evidence_quote": "Trình độ tối thiểu của chức danh giảng viên giảng dạy trình độ đại học là thạc sĩ, trừ chức danh trợ giảng; trình độ của chức danh giảng viên giảng dạy trình độ thạc sĩ, tiến sĩ là tiến sĩ"
+  },
+  {
+    "id": "q16",
+    "split": "test",
+    "type": "truc_tiep",
+    "question": "Nguồn tài chính của cơ sở giáo dục đại học bao gồm những khoản thu chủ yếu nào?",
+    "expected_answer": "Học phí và khoản thu từ người học; thu từ hoạt động KH-CN, dịch vụ đào tạo; thu từ tài trợ, viện trợ, quà tặng; ngân sách nhà nước cấp (với trường công lập) và nguồn thu hợp pháp khác.",
+    "gold_source_id": "luat-34-2018-qh14",
+    "gold_page": 30,
+    "evidence_quote": "Nguồn tài chính của cơ sở giáo dục đại học bao gồm: a) Học phí và các khoản thu từ người học; b) Thu từ hoạt động khoa học và công nghệ"
+  },
+  {
+    "id": "q17",
+    "split": "test",
+    "type": "metadata_filter",
+    "filter": {
+      "section": "tai_chinh_tai_san"
+    },
+    "question": "Khái niệm học phí trong cơ sở giáo dục đại học được định nghĩa như thế nào?",
+    "expected_answer": "Học phí là khoản tiền mà người học phải nộp cho cơ sở giáo dục đại học để bù đắp một phần hoặc toàn bộ chi phí đào tạo.",
+    "gold_source_id": "luat-34-2018-qh14",
+    "gold_page": 31,
+    "evidence_quote": "Học phí là khoản tiền mà người học phải nộp cho cơ sở giáo dục đại học để bù đắp một phần hoặc toàn bộ chi phí đào tạo"
+  },
+  {
+    "id": "q18",
+    "split": "test",
+    "type": "dieu_kien_ngoai_le",
+    "question": "Trường đại học công lập nào có quyền tự chủ tự quyết định mức thu học phí?",
+    "expected_answer": "Cơ sở GDĐH đáp ứng điều kiện tự chủ (khoản 2 Điều 32) và tự bảo đảm toàn bộ kinh phí chi thường xuyên.",
+    "gold_source_id": "luat-34-2018-qh14",
+    "gold_page": 31,
+    "evidence_quote": "tự bảo đảm toàn bộ kinh phí chi thường xuyên được tự chủ xác định mức thu học phí"
+  },
+  {
+    "id": "q19",
+    "split": "test",
+    "type": "truc_tiep",
+    "question": "Luật sửa đổi, bổ sung một số điều của Luật Giáo dục đại học (Luật số 34/2018/QH14) chính thức có hiệu lực thi hành từ ngày nào?",
+    "expected_answer": "Có hiệu lực thi hành từ ngày 01 tháng 07 năm 2019.",
+    "gold_source_id": "luat-34-2018-qh14",
+    "gold_page": 35,
+    "evidence_quote": "Luật này có hiệu lực thi hành từ ngày 01 tháng 07 năm 2019"
+  },
+  {
+    "id": "q20",
+    "split": "test",
+    "type": "dien_dat_lai",
+    "question": "Ai được coi là nhà đầu tư thành lập trường đại học tư thục theo quy định của Luật?",
+    "expected_answer": "Nhà đầu tư là tổ chức, cá nhân trong nước hoặc tổ chức, cá nhân nước ngoài đầu tư tài chính hoặc tài sản khác để thành lập trường đại học tư thục.",
+    "gold_source_id": "luat-34-2018-qh14",
+    "gold_page": 11,
+    "evidence_quote": "Nhà đầu tư là tổ chức, cá nhân trong nước, tổ chức, cá nhân nước ngoài đầu tư tài chính hoặc tài sản khác để thành lập trường đại học tư thục"
+  }
+]

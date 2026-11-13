@@ -1,4 +1,4 @@
 strategy,chunking,chunk_size,overlap,metadata,filter,vectorizer,hypothesis,dev_hit1,dev_hit3,test_hit1,test_hit3,notes
-A,,,,,,,,,,,,
-B,,,,,,,,,,,,
-C,,,,,,,,,,,,
+A,fixed,500,50,"doc_id,source,page,section",none,text-embedding-3-small,Baseline sliding window chunking; de bi cat ngang cau/khoan luat lam giam Hit rate,6/15 (40.0%),6/15 (40.0%),0/5 (0.0%),1/5 (20.0%),Chunk co dinh 500 chars gay cat rach evidence quote; Hit rate thap
+B,paragraph,800,0,"doc_id,source,page,section",none,text-embedding-3-small,Structure-aware chunking theo khoan luat giup giu tron ven ngu canh phap ly,9/15 (60.0%),11/15 (73.3%),2/5 (40.0%),3/5 (60.0%),Coherence cao hon A ro ret; Hit@3 tang tu 40% len 73.3% tren Dev
+C,paragraph,800,0,"doc_id,source,page,section",section,text-embedding-3-small,Giong B ve chunking nhung ap dung filter section de loai bo chunk nhieu ngoai phan he,9/15 (60.0%),11/15 (73.3%),2/5 (40.0%),3/5 (60.0%),Loai bo thanh cong chunk nhieu ngoai phan he (vi du q06 loai bo chunk dieu_khoan_thi_hanh o rank 2)

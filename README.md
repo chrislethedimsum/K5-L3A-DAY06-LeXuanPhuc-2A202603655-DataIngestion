@@ -1,8 +1,36 @@
 # Day 06 · Data Ingestion Engineering
 
-**Lab cá nhân** · **4 giờ** · **Dữ liệu tự chọn**
+**Học viên:** Lê Xuân Phúc — **MSSV:** 2A202603655 — **Lớp:** K5-L3A  
+**Báo cáo cá nhân:** [report/individual/2A202603655_LeXuanPhuc.md](report/individual/2A202603655_LeXuanPhuc.md)  
+**Corpus dữ liệu:** [data/34-2018-qh14..pdf](data/34-2018-qh14..pdf) | **Manifest:** [data/manifest.json](data/manifest.json)  
+**Bộ Benchmark:** [benchmark/questions.json](benchmark/questions.json) | **Log thí nghiệm:** [artifacts/experiment_log.csv](artifacts/experiment_log.csv)  
 
-Biến tài liệu thành kho tri thức có thể truy xuất cho AI agent, rồi đo xem cách chuẩn bị dữ liệu nào hiệu quả nhất.
+---
+
+## ⚡ Hướng Dẫn Setup & Chạy Tái Lập (Quickstart)
+
+```bash
+# 1. Kích hoạt môi trường và cài đặt dependencies
+cd starter
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+pip install openai
+
+# 2. Cấu hình biến môi trường
+cp .env.example .env
+# Điền OPENAI_API_KEY và EMBEDDING_MODEL=text-embedding-3-small vào .env
+
+# 3. Khởi chạy PostgreSQL + pgvector qua Docker
+docker-compose -p day6_student_starter up -d --wait
+
+# 4. Chạy toàn bộ pipeline và benchmark 3 chiến lược
+python -m src.run
+```
+Kết quả trace và thống kê sẽ được tự động xuất ra thư mục `results/` và `starter/results/`.
+
+---
+
 
 | 📄 Dữ liệu | 🧩 Chiến lược | 🎯 Benchmark |
 |---|---|---|

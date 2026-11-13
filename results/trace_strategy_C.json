@@ -1,0 +1,973 @@
+{
+  "summary": {
+    "all": {
+      "total": 20,
+      "hit1": 11,
+      "hit1_rate": 0.55,
+      "hit3": 14,
+      "hit3_rate": 0.7
+    },
+    "dev": {
+      "total": 15,
+      "hit1": 9,
+      "hit1_rate": 0.6,
+      "hit3": 11,
+      "hit3_rate": 0.7333
+    },
+    "test": {
+      "total": 5,
+      "hit1": 2,
+      "hit1_rate": 0.4,
+      "hit3": 3,
+      "hit3_rate": 0.6
+    }
+  },
+  "traces": [
+    {
+      "id": "q01",
+      "split": "dev",
+      "type": "truc_tiep",
+      "question": "Theo Luật sửa đổi, bổ sung Luật Giáo dục đại học 2018, trường đại học hoặc học viện được định nghĩa như thế nào?",
+      "gold_page": 1,
+      "evidence_quote": "Trường đại học, học viện (sau đây gọi chung là trường đại học) là cơ sở giáo dục đại học đào tạo, nghiên cứu nhiều ngành, được cơ cấu tổ chức theo quy định của Luật này.",
+      "filter": null,
+      "hit_rank": null,
+      "hit_at_1": false,
+      "hit_at_3": false,
+      "top_hits": [
+        {
+          "chunk_id": "B_luat-34-2018-qh14_p1_c1",
+          "document_id": "luat-34-2018-qh14",
+          "source": "data/34-2018-qh14..pdf",
+          "page": 1,
+          "text": "QUỐC HỘI Luật số: 34/2018/QH14 CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM Độc lập - Tự do - Hạnh phúc LUẬT SỬA ĐỔI, BỔ SUNG MỘT SỐ ĐIỀU CỦA LUẬT GIÁO DỤC ĐẠI HỌC Căn cứ Hiến pháp nước Cộng hòa xã hội chủ nghĩa Việt Nam; Quốc hội ban hành Luật sửa đổi, bổ sung một số điều của Luật Giáo dục đại học số 08/2012/QH13 đã được sửa đổi, bổ sung một số điều theo Luật số 32/2013/QH13, Luật số 74/2014/QH13 và Luật số 97/2015/QH13. Điều 1. Sửa đổi, bổ sung một số điều của Luật Giáo dục đại học 1. Sửa đổi, bổ sung Điều 2 như sau: “ Điều 2. Đối tượng áp dụng 1. Luật này áp dụng đối với cơ sở giáo dục đại học, tổ chức và cá nhân có liên quan đến giáo dục đại học.",
+          "metadata": {
+            "section": "he_thong_co_so_gd"
+          },
+          "score": 0.6738775315588812
+        },
+        {
+          "chunk_id": "B_luat-34-2018-qh14_p35_c1",
+          "document_id": "luat-34-2018-qh14",
+          "source": "data/34-2018-qh14..pdf",
+          "page": 35,
+          "text": "tra việc chấp hành pháp luật về giáo dục của cơ sở giáo dục đại học tại địa phương; thực hi ện xã hội hóa giáo dục đại học; bảo đảm đáp ứng yêu cầu nâng cao chất lượng và hiệu quả giáo dục đại học tại địa phương.”. Điều 2. Thay thế, bỏ một số từ, cụm từ tại một số điều, khoản của Luật Giáo dục đại học 1. Thay thế từ “chủ động” bằng từ “tự chủ” tại khoản 2 Điều 8; cụm từ “viện nghiên cứu khoa học” bằng cụm từ “viện hàn lâm, vi ện” tại Điều 30; cụm từ “tự chịu trách nhi ệm” bằng cụm từ “có trách nhi ệm giải trình” tại điểm dvà điểm đkhoản 1 Điều 36, khoản 4 Điều 41 và Điều 53; cụm từ “Hiệp định ký kết với Nhà nước Vi ệt Nam” bằng cụm từ “ điều ước quốc tế mà nước Cộng hòa xã hội chủ nghĩa Việt Nam là thành viên” tại khoản 1 Điều 63.",
+          "metadata": {
+            "section": "dieu_khoan_thi_hanh"
+          },
+          "score": 0.6588377302109127
+        },
+        {
+          "chunk_id": "B_luat-34-2018-qh14_p30_c1",
+          "document_id": "luat-34-2018-qh14",
+          "source": "data/34-2018-qh14..pdf",
+          "page": 30,
+          "text": "khoa học, cơ quan, tổ chức khác theo quy định của cơ sở giáo dục đại học mà mình đang làm việc.”; d) Sửa đổi, bổ sung khoản 9 như sau: “ 9. Nhiệm vụ và quyền hạn khác theo quy chế tổ chức và hoạt động của cơ sở giáo dục đại học và quy định khác của pháp luật có liên quan.”. 31. Sửa đổi, bổ sung một số khoản của Điều 60 như sau: a) Sửa đổi, bổ sung khoản 4 như sau: “ 4. Được tôn trọng và đối xử bình đẳng, không phân bi ệt đối xử về giới, dân tộc, tôn giáo, nguồn gốc xuất thân; được định hướng nghề nghiệp và cung cấp đầy đủ thông tin về việc học tập, rèn luyện.”; b) Sửa đổi, bổ sung khoản 5 như sau: “",
+          "metadata": {
+            "section": "giang_vien_nguoi_hoc"
+          },
+          "score": 0.6083325556192404
+        }
+      ]
+    },
+    {
+      "id": "q02",
+      "split": "dev",
+      "type": "truc_tiep",
+      "question": "Các hình thức đào tạo để cấp văn bằng các trình độ đào tạo của giáo dục đại học bao gồm những hình thức nào?",
+      "gold_page": 3,
+      "evidence_quote": "Hình thức đào tạo để cấp văn bằng các trình độ đào tạo của giáo dục đại học bao gồm chính quy, vừa làm vừa học, đào tạo từ xa.",
+      "filter": null,
+      "hit_rank": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "top_hits": [
+        {
+          "chunk_id": "B_luat-34-2018-qh14_p3_c1",
+          "document_id": "luat-34-2018-qh14",
+          "source": "data/34-2018-qh14..pdf",
+          "page": 3,
+          "text": "2. Hình thức đào tạo để cấp văn bằng các trình độ đào tạo của giáo dục đại học bao gồm chính quy, vừa làm vừa học, đào tạo từ xa. Việc chuyển đổi giữa các hình thức đào tạo được thực hiện theo nguyên tắc liên thông. 3. Cơ sở giáo dục đại học được tổ chức ho ạt động giáo dục thường xuyên, cung cấp dịch vụ đào tạo, bồi dưỡng ngắn hạn cấp chứng chỉ, chứng nhận phù hợp với ngành, lĩnh vực đào tạo của mỗi cơ sở theo quy định của pháp luật để đáp ứng nhu cầu học tập suốt đời của người học. 4. Chính phủ quy định trình độ đào tạo đối với một số ngành đào tạo chuyên sâu đặc thù.”. 4. Sửa đổi, bổ sung Điều 7 như sau: “ Điều 7. Cơ sở giáo dục đại học",
+          "metadata": {
+            "section": "he_thong_co_so_gd"
+          },
+          "score": 0.6887573843600007
+        },
+        {
+          "chunk_id": "B_luat-34-2018-qh14_p2_c4",
+          "document_id": "luat-34-2018-qh14",
+          "source": "data/34-2018-qh14..pdf",
+          "page": 2,
+          "text": "1. Các trình độ đào tạo của giáo dục đại học bao gồm trình độ đại học, trình độ thạc sĩ và trình độ tiến sĩ.",
+          "metadata": {
+            "section": "he_thong_co_so_gd"
+          },
+          "score": 0.6810196064457089
+        },
+        {
+          "chunk_id": "B_luat-34-2018-qh14_p24_c3",
+          "document_id": "luat-34-2018-qh14",
+          "source": "data/34-2018-qh14..pdf",
+          "page": 24,
+          "text": "2. Người học hoàn thành chương trình đào tạo, đạt chuẩn đầu ra của trình độ đào tạo theo quy định, hoàn thành nghĩa vụ, trách nhi ệm của người học thì được hiệu trưởng cơ sở giáo dục đại học cấp văn bằng ở trình độ đào tạo tương ứng. 3. Cơ sở giáo dục đại học thiết kế mẫu, in phôi, cấp phát văn bằng cho người học và quản lý văn bằng, chứng chỉ phù hợp với quy định của pháp lu ật; công bố công khai mẫu văn bằng, thông tin liên quan đến việc cấp văn bằng cho người học trên trang thông tin điện tử của cơ sở giáo dục đại học. 4. Bộ trưởng Bộ Giáo dục và Đào tạo đàm phán, ký ho ặc đề xuất cấp có thẩm quyền đàm phán, ký điều ước quốc tế về công nhận văn bằng với các quốc gia, tổ chức quốc tế và chủ thể khác theo thẩm quyền.",
+          "metadata": {
+            "section": "hoat_dong_dao_tao"
+          },
+          "score": 0.6421751224252376
+        }
+      ]
+    },
+    {
+      "id": "q03",
+      "split": "dev",
+      "type": "truc_tiep",
+      "question": "Hội đồng trường của trường đại học công lập là tổ chức gì và đại diện cho ai?",
+      "gold_page": 7,
+      "evidence_quote": "Hội đồng trường của trường đại học công lập là tổ chức quản trị, thực hiện quyền đại diện của chủ sở hữu và các bên có lợi ích liên quan.",
+      "filter": null,
+      "hit_rank": 2,
+      "hit_at_1": false,
+      "hit_at_3": true,
+      "top_hits": [
+        {
+          "chunk_id": "B_luat-34-2018-qh14_p10_c3",
+          "document_id": "luat-34-2018-qh14",
+          "source": "data/34-2018-qh14..pdf",
+          "page": 10,
+          "text": "đ) Ngân sách ho ạt động, cơ quan thường trực, cơ quan ki ểm soát và bộ máy giúp việc của hội đồng trường; thủ tục, thành phần của hội nghị toàn thể hoặc hội nghị đại biểu của trường đại học; e) Phân định trách nhi ệm và quy ền hạn khác giữa hội đồng trường và hi ệu trưởng trường đại học; g) Nội dung khác theo yêu cầu tổ chức và hoạt động của hội đồng trường. 7. Hội đồng trường của trường đại học công lập thành viên trong đại học thực hiện quy định tại Điều này và quy chế tổ chức và hoạt động của đại học.",
+          "metadata": {
+            "section": "to_chuc_quan_tri"
+          },
+          "score": 0.6689147232038852
+        },
+        {
+          "chunk_id": "B_luat-34-2018-qh14_p7_c1",
+          "document_id": "luat-34-2018-qh14",
+          "source": "data/34-2018-qh14..pdf",
+          "page": 7,
+          "text": "đ) Khoa, phân hi ệu, viện nghiên cứu, trung tâm, cơ sở dịch vụ, doanh nghiệp, cơ sở kinh doanh và đơn vị khác (nếu có) theo nhu cầu phát triển của đại học. 2. Cơ cấu tổ chức cụ thể của đại học, mối quan hệ, mức độ tự chủ của đơn vị thành viên và đơn vị thu ộc, trực thu ộc đại học được quy định trong quy chế tổ chức và hoạt động của đại học.”. 10. Sửa đổi, bổ sung Điều 16 như sau: “ Điều 16. Hội đồng trường của trường đại học công lập 1. Hội đồng trường của trường đại học công lập là tổ chức quản trị, thực hiện quyền đại diện của chủ sở hữu và các bên có lợi ích liên quan. 2. Hội đồng trường của trường đại học công lập có trách nhi ệm và quy ền hạn sau đây:",
+          "metadata": {
+            "section": "to_chuc_quan_tri"
+          },
+          "score": 0.633596119847541
+        },
+        {
+          "chunk_id": "B_luat-34-2018-qh14_p14_c1",
+          "document_id": "luat-34-2018-qh14",
+          "source": "data/34-2018-qh14..pdf",
+          "page": 14,
+          "text": "Điều 16 của Luật này; quy định tỷ lệ đại diện nhà đầu tư trong tổng số thành viên hội đồng trường đại học. 6. Chính phủ quy định chi ti ết thủ tục thành lập, công nhận hội đồng trường; việc công nhận, bãi nhiệm, miễn nhiệm chủ tịch hội đồng trường.”. 13. Sửa đổi, bổ sung Điều 18 như sau: “ Điều 18. Hội đồng đại học 1. Hội đồng đại học công lập có trách nhiệm và quyền hạn sau đây: a) Quyết định về chiến lược, kế hoạch phát tri ển, kế hoạch hàng năm của đại học, việc kết nạp thành viên mới, tổ chức lại đại học theo quy định của pháp luật; b) Ban hành quy chế tổ chức và hoạt động, quy chế tài chính, quy chế dân chủ ở cơ sở của đại học, trừ trường hợp quy định tại khoản 2 Điều 29 của Luật này, phù hợp với quy định của Luật này và quy định khác của pháp luật có liên quan;",
+          "metadata": {
+            "section": "to_chuc_quan_tri"
+          },
+          "score": 0.6231273348702779
+        }
+      ]
+    },
+    {
+      "id": "q04",
+      "split": "dev",
+      "type": "dieu_kien_ngoai_le",
+      "question": "Tiêu chuẩn cơ bản về trình độ học vấn và kinh nghiệm quản lý đối với Hiệu trưởng cơ sở giáo dục đại học là gì?",
+      "gold_page": 17,
+      "evidence_quote": "Tiêu chuẩn hiệu trưởng cơ sở giáo dục đại học được quy định như sau: a) Có phẩm chất chính trị, đạo đức tốt, có trình độ tiến sĩ, có đủ sức khỏe để thực hiện nhiệm vụ, có uy tín khoa học và kinh nghiệm quản lý giáo dục đại học",
+      "filter": null,
+      "hit_rank": null,
+      "hit_at_1": false,
+      "hit_at_3": false,
+      "top_hits": [
+        {
+          "chunk_id": "B_luat-34-2018-qh14_p17_c3",
+          "document_id": "luat-34-2018-qh14",
+          "source": "data/34-2018-qh14..pdf",
+          "page": 17,
+          "text": "2. Tiêu chuẩn hiệu trưởng cơ sở giáo dục đại học được quy định như sau: a) Có phẩm chất chính trị, đạo đức tốt, có trình độ tiến sĩ, có đủ sức khỏe để thực hiện nhiệm vụ, có uy tín khoa học và kinh nghi ệm quản lý giáo dục đại học; độ tuổi đảm nhiệm chức vụ hiệu trưởng cơ sở giáo dục đại học công lập theo quy định của pháp luật; b) Đáp ứng tiêu chuẩn cụ thể của hiệu trưởng cơ sở giáo dục đại học được quy định trong quy chế tổ chức và hoạt động của cơ sở giáo dục đại học. 3. Nhiệm vụ và quy ền hạn của hiệu trưởng cơ sở giáo dục đại học được quy định như sau: a) Là người đại di ện theo pháp lu ật và là chủ tài kho ản của cơ sở giáo dục đại học, trừ trường hợp quy chế tổ chức và ho ạt động của cơ sở giáo dục đại học",
+          "metadata": {
+            "section": "to_chuc_quan_tri"
+          },
+          "score": 0.6379086420692267
+        },
+        {
+          "chunk_id": "B_luat-34-2018-qh14_p20_c1",
+          "document_id": "luat-34-2018-qh14",
+          "source": "data/34-2018-qh14..pdf",
+          "page": 20,
+          "text": "2. Điều kiện thực hiện quyền tự chủ của cơ sở giáo dục đại học được quy định như sau: a) Đã thành lập hội đồng trường, hội đồng đại học; đã được công nhận đạt chuẩn chất lượng cơ sở giáo dục đại học bởi tổ chức kiểm định chất lượng giáo dục hợp pháp; b) Đã ban hành và tổ chức thực hiện quy chế tổ chức và hoạt động; quy chế tài chính; quy chế, quy trình, quy định quản lý nội bộ khác và có chính sách bảo đảm chất lượng đáp ứng tiêu chuẩn do Nhà nước quy định; c) Thực hiện phân quyền tự chủ và trách nhi ệm giải trình đến từng đơn vị, cá nhân trong cơ sở giáo dục đại học; d) Công khai điều kiện bảo đảm chất lượng, kết quả kiểm định, tỷ lệ sinh viên tốt nghiệp có việc làm và thông tin khác theo quy định của pháp luật.",
+          "metadata": {
+            "section": "quyen_tu_chu"
+          },
+          "score": 0.6086324390707535
+        },
+        {
+          "chunk_id": "B_luat-34-2018-qh14_p17_c2",
+          "document_id": "luat-34-2018-qh14",
+          "source": "data/34-2018-qh14..pdf",
+          "page": 17,
+          "text": "1. Hiệu trưởng trường đại học, giám đốc đại học (gọi chung là hi ệu trưởng cơ sở giáo dục đại học) là người chịu trách nhi ệm quản lý, điều hành các ho ạt động của cơ sở giáo dục đại học theo quy định của pháp lu ật, quy chế tổ chức và ho ạt động của cơ sở giáo dục đại học. Hiệu trưởng cơ sở giáo dục đại học công lập do hội đồng trường, hội đồng đại học quyết định và được cơ quan quản lý có thẩm quyền công nhận; hiệu trưởng cơ sở giáo dục đại học tư thục, cơ sở giáo dục đại học tư thục hoạt động không vì lợi nhuận do hội đồng trường, hội đồng đại học quyết định bổ nhiệm. Nhiệm kỳ hoặc thời gian bổ nhiệm của hiệu trưởng cơ sở giáo dục đại học do hội đồng trường, hội đồng đại học quy ết định trong phạm vi nhi ệm kỳ của hội đồng trường, hội đồng đại học.",
+          "metadata": {
+            "section": "to_chuc_quan_tri"
+          },
+          "score": 0.6010957436813832
+        }
+      ]
+    },
+    {
+      "id": "q05",
+      "split": "dev",
+      "type": "truc_tiep",
+      "question": "Cơ sở giáo dục đại học thực hiện quyền tự chủ và trách nhiệm giải trình theo quy định nào?",
+      "gold_page": 19,
+      "evidence_quote": "Cơ sở giáo dục đại học thực hiện quyền tự chủ và trách nhiệm giải trình theo quy định của pháp luật.",
+      "filter": null,
+      "hit_rank": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "top_hits": [
+        {
+          "chunk_id": "B_luat-34-2018-qh14_p19_c3",
+          "document_id": "luat-34-2018-qh14",
+          "source": "data/34-2018-qh14..pdf",
+          "page": 19,
+          "text": "32. Quy ền tự chủ và trách nhi ệm giải trình của cơ sở giáo dục đại học 1. Cơ sở giáo dục đại học thực hiện quyền tự chủ và trách nhiệm giải trình theo quy định của pháp luật. Các cơ quan, tổ chức, cá nhân có trách nhi ệm tôn trọng và bảo đảm quyền tự chủ của cơ sở giáo dục đại học.",
+          "metadata": {
+            "section": "quyen_tu_chu"
+          },
+          "score": 0.7552343768313903
+        },
+        {
+          "chunk_id": "B_luat-34-2018-qh14_p21_c1",
+          "document_id": "luat-34-2018-qh14",
+          "source": "data/34-2018-qh14..pdf",
+          "page": 21,
+          "text": "c) Giải trình về mức lương, thưởng và quyền lợi khác của chức danh lãnh đạo, quản lý của cơ sở giáo dục đại học tại hội nghị cán bộ, viên chức, người lao động; thực hiện kiểm toán đối với báo cáo tài chính, báo cáo quy ết toán hàng năm, kiểm toán đầu tư và mua sắm; giải trình về hoạt động của cơ sở giáo dục đại học trước chủ sở hữu, cơ quan quản lý có thẩm quyền; d) Th ực hi ện công khai trung thực báo cáo tài chính hàng năm và nội dung khác trên trang thông tin điện tử của cơ sở giáo dục đại học theo quy định của Bộ Giáo dục và Đào tạo; đ) Thực hiện nội dung, hình thức giải trình khác theo quy định của pháp luật. 7. Chính phủ quy định chi tiết về quyền tự chủ và trách nhiệm giải trình của cơ sở giáo dục đại học.”. 18. Sửa đổi, bổ sung Điều 33 như sau: “ Điều 33. Mở ngành đào tạo",
+          "metadata": {
+            "section": "quyen_tu_chu"
+          },
+          "score": 0.7180027523470904
+        },
+        {
+          "chunk_id": "B_luat-34-2018-qh14_p2_c3",
+          "document_id": "luat-34-2018-qh14",
+          "source": "data/34-2018-qh14..pdf",
+          "page": 2,
+          "text": "11. Quyền tự chủ là quyền của cơ sở giáo dục đại học được tự xác định mục tiêu và lựa chọn cách thức thực hiện mục tiêu; tự quyết định và có trách nhiệm giải trình về hoạt động chuyên môn, học thuật, tổ chức, nhân sự, tài chính, tài sản và hoạt động khác trên cơ sở quy định của pháp lu ật và năng lực của cơ sở giáo dục đại học. 12. Trách nhi ệm giải trình là vi ệc cơ sở giáo dục đại học có trách nhi ệm báo cáo, minh bạch thông tin đối với người học, xã hội, cơ quan quản lý có thẩm quyền, chủ sở hữu và các bên liên quan về việc tuân thủ quy định của pháp luật và thực hiện đúng quy định, cam kết của cơ sở giáo dục đại học.”. 3. Sửa đổi, bổ sung Điều 6 như sau: “ Điều 6. Trình độ và hình thức đào tạo của giáo dục đại học",
+          "metadata": {
+            "section": "he_thong_co_so_gd"
+          },
+          "score": 0.7121851638210032
+        }
+      ]
+    },
+    {
+      "id": "q06",
+      "split": "dev",
+      "type": "metadata_filter",
+      "question": "Để được thực hiện quyền tự chủ, cơ sở giáo dục đại học phải đáp ứng những điều kiện tiên quyết nào?",
+      "gold_page": 20,
+      "evidence_quote": "Đã thành lập hội đồng trường, hội đồng đại học; đã được công nhận đạt chuẩn chất lượng cơ sở giáo dục đại học bởi tổ chức kiểm định chất lượng giáo dục hợp pháp",
+      "filter": {
+        "section": "quyen_tu_chu"
+      },
+      "hit_rank": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "top_hits": [
+        {
+          "chunk_id": "B_luat-34-2018-qh14_p20_c1",
+          "document_id": "luat-34-2018-qh14",
+          "source": "data/34-2018-qh14..pdf",
+          "page": 20,
+          "text": "2. Điều kiện thực hiện quyền tự chủ của cơ sở giáo dục đại học được quy định như sau: a) Đã thành lập hội đồng trường, hội đồng đại học; đã được công nhận đạt chuẩn chất lượng cơ sở giáo dục đại học bởi tổ chức kiểm định chất lượng giáo dục hợp pháp; b) Đã ban hành và tổ chức thực hiện quy chế tổ chức và hoạt động; quy chế tài chính; quy chế, quy trình, quy định quản lý nội bộ khác và có chính sách bảo đảm chất lượng đáp ứng tiêu chuẩn do Nhà nước quy định; c) Thực hiện phân quyền tự chủ và trách nhi ệm giải trình đến từng đơn vị, cá nhân trong cơ sở giáo dục đại học; d) Công khai điều kiện bảo đảm chất lượng, kết quả kiểm định, tỷ lệ sinh viên tốt nghiệp có việc làm và thông tin khác theo quy định của pháp luật.",
+          "metadata": {
+            "section": "quyen_tu_chu"
+          },
+          "score": 0.7346410368718942
+        },
+        {
+          "chunk_id": "B_luat-34-2018-qh14_p19_c3",
+          "document_id": "luat-34-2018-qh14",
+          "source": "data/34-2018-qh14..pdf",
+          "page": 19,
+          "text": "32. Quy ền tự chủ và trách nhi ệm giải trình của cơ sở giáo dục đại học 1. Cơ sở giáo dục đại học thực hiện quyền tự chủ và trách nhiệm giải trình theo quy định của pháp luật. Các cơ quan, tổ chức, cá nhân có trách nhi ệm tôn trọng và bảo đảm quyền tự chủ của cơ sở giáo dục đại học.",
+          "metadata": {
+            "section": "quyen_tu_chu"
+          },
+          "score": 0.6880480321787611
+        },
+        {
+          "chunk_id": "B_luat-34-2018-qh14_p21_c1",
+          "document_id": "luat-34-2018-qh14",
+          "source": "data/34-2018-qh14..pdf",
+          "page": 21,
+          "text": "c) Giải trình về mức lương, thưởng và quyền lợi khác của chức danh lãnh đạo, quản lý của cơ sở giáo dục đại học tại hội nghị cán bộ, viên chức, người lao động; thực hiện kiểm toán đối với báo cáo tài chính, báo cáo quy ết toán hàng năm, kiểm toán đầu tư và mua sắm; giải trình về hoạt động của cơ sở giáo dục đại học trước chủ sở hữu, cơ quan quản lý có thẩm quyền; d) Th ực hi ện công khai trung thực báo cáo tài chính hàng năm và nội dung khác trên trang thông tin điện tử của cơ sở giáo dục đại học theo quy định của Bộ Giáo dục và Đào tạo; đ) Thực hiện nội dung, hình thức giải trình khác theo quy định của pháp luật. 7. Chính phủ quy định chi tiết về quyền tự chủ và trách nhiệm giải trình của cơ sở giáo dục đại học.”. 18. Sửa đổi, bổ sung Điều 33 như sau: “ Điều 33. Mở ngành đào tạo",
+          "metadata": {
+            "section": "quyen_tu_chu"
+          },
+          "score": 0.6808781988677937
+        }
+      ]
+    },
+    {
+      "id": "q07",
+      "split": "dev",
+      "type": "dieu_kien_ngoai_le",
+      "question": "Khi nào cơ sở giáo dục đại học được quyền tự chủ mở ngành đào tạo trình độ đại học?",
+      "gold_page": 21,
+      "evidence_quote": "Cơ sở giáo dục đại học đáp ứng điều kiện quy định tại khoản 1, khoản 2 Điều này và khoản 2 Điều 32 của Luật này được tự chủ mở ngành đào tạo trình độ đại học",
+      "filter": null,
+      "hit_rank": null,
+      "hit_at_1": false,
+      "hit_at_3": false,
+      "top_hits": [
+        {
+          "chunk_id": "B_luat-34-2018-qh14_p22_c1",
+          "document_id": "luat-34-2018-qh14",
+          "source": "data/34-2018-qh14..pdf",
+          "page": 22,
+          "text": "thạc sĩ, tiến sĩ, cơ sở giáo dục đại học được tự chủ mở ngành và thực hiện quy định tại khoản 5 Điều này, quy định về kiểm định chất lượng của Luật này. 4. Cơ sở giáo dục đại học tự chủ mở ngành đào tạo khi chưa bảo đảm các điều kiện theo quy định thì bị đình chỉ hoạt động đào tạo đối với ngành đào tạo đó và không được tự chủ mở ngành đào tạo trong thời hạn 05 năm, kể từ khi có kết luận về việc vi phạm của cơ quan nhà nước có thẩm quyền.",
+          "metadata": {
+            "section": "hoat_dong_dao_tao"
+          },
+          "score": 0.7233686605361357
+        },
+        {
+          "chunk_id": "B_luat-34-2018-qh14_p21_c3",
+          "document_id": "luat-34-2018-qh14",
+          "source": "data/34-2018-qh14..pdf",
+          "page": 21,
+          "text": "2. Bộ trưởng Bộ Giáo dục và Đào tạo quy định chi tiết điều kiện mở ngành đào tạo; quy định trình tự, thủ tục mở ngành, đình chỉ ho ạt động của ngành đào tạo; quyết định cho phép mở ngành đối với cơ sở giáo dục đại học chưa đủ điều kiện được tự chủ mở ngành đào tạo quy định tại khoản 3 Điều này và đối với các ngành thuộc lĩnh vực sức khỏe, đào tạo giáo viên, quốc phòng, an ninh. 3. Cơ sở giáo dục đại học đáp ứng điều ki ện quy định tại kho ản 1, kho ản 2 Điều này và khoản 2",
+          "metadata": {
+            "section": "quyen_tu_chu"
+          },
+          "score": 0.6752211858583238
+        },
+        {
+          "chunk_id": "B_luat-34-2018-qh14_p21_c4",
+          "document_id": "luat-34-2018-qh14",
+          "source": "data/34-2018-qh14..pdf",
+          "page": 21,
+          "text": "Điều 32 của Luật này được tự chủ mở ngành đào tạo trình độ đại học; khi đạt chuẩn kiểm định chất lượng chương trình đào tạo trình độ đại học thì được tự chủ mở ngành đào tạo trình độ thạc sĩ ngành phù hợp; khi đạt chuẩn kiểm định chất lượng chương trình đào tạo trình độ đại học, thạc sĩ thì được tự chủ mở ngành đào tạo trình độ tiến sĩ ngành phù hợp, trừ các ngành thuộc lĩnh vực sức khỏe, đào tạo giáo viên, quốc phòng, an ninh; trường hợp mở ngành mới trình độ",
+          "metadata": {
+            "section": "quyen_tu_chu"
+          },
+          "score": 0.6512272538825081
+        }
+      ]
+    },
+    {
+      "id": "q08",
+      "split": "dev",
+      "type": "dien_dat_lai",
+      "question": "Chỉ tiêu tuyển sinh của cơ sở giáo dục đại học được xác định dựa trên những căn cứ nào?",
+      "gold_page": 22,
+      "evidence_quote": "Chỉ tiêu tuyển sinh được xác định theo ngành, nhóm ngành đào tạo trên cơ sở nhu cầu lao động của thị trường, yêu cầu phát triển kinh tế - xã hội",
+      "filter": null,
+      "hit_rank": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "top_hits": [
+        {
+          "chunk_id": "B_luat-34-2018-qh14_p22_c3",
+          "document_id": "luat-34-2018-qh14",
+          "source": "data/34-2018-qh14..pdf",
+          "page": 22,
+          "text": "a) Chỉ tiêu tuyển sinh được xác định theo ngành, nhóm ngành đào tạo trên cơ sở nhu cầu lao động của thị trường, yêu cầu phát triển kinh tế - xã hội và phù hợp với các điều kiện về số lượng, chất lượng đội ngũ giảng viên, cơ sở vật chất, tỷ lệ có việc làm của sinh viên tốt nghiệp của cơ sở giáo dục đại học và các điều kiện bảo đảm chất lượng khác; b) Cơ sở giáo dục đại học tự xác định chỉ tiêu tuy ển sinh; công bố công khai chỉ tiêu tuy ển sinh, chất lượng đào tạo và các điều kiện bảo đảm chất lượng đào tạo, tỷ lệ có vi ệc làm của sinh viên tốt nghiệp; bảo đảm chuẩn đầu ra của chương trình đào tạo đã công bố;",
+          "metadata": {
+            "section": "hoat_dong_dao_tao"
+          },
+          "score": 0.676804863218183
+        },
+        {
+          "chunk_id": "B_luat-34-2018-qh14_p22_c4",
+          "document_id": "luat-34-2018-qh14",
+          "source": "data/34-2018-qh14..pdf",
+          "page": 22,
+          "text": "c) Cơ sở giáo dục đại học vi phạm quy định về đối tượng, điều kiện, chỉ tiêu tuyển sinh thì bị xử lý theo quy định của pháp luật và không được tự xác định chỉ tiêu tuyển sinh trong thời hạn 05 năm, kể từ khi có kết luận về việc vi phạm của cơ quan nhà nước có thẩm quyền.”; b) Sửa đổi, bổ sung khoản 3 như sau: “ 3. Bộ trưởng Bộ Giáo dục và Đào tạo ban hành quy chế tuyển sinh, quy định nguồn tuy ển sinh trình độ đại học từ học sinh tốt nghi ệp trung học phổ thông, người tốt nghiệp cao đẳng, trung cấp; quy định tiêu chí, nguyên tắc, quy trình xác định chỉ tiêu tuy ển sinh; quy định chỉ tiêu tuy ển sinh đối với các ngành đào tạo",
+          "metadata": {
+            "section": "hoat_dong_dao_tao"
+          },
+          "score": 0.5771404644715333
+        },
+        {
+          "chunk_id": "B_luat-34-2018-qh14_p23_c1",
+          "document_id": "luat-34-2018-qh14",
+          "source": "data/34-2018-qh14..pdf",
+          "page": 23,
+          "text": "giáo viên và chỉ tiêu tuy ển sinh của cơ sở giáo dục đại học quy định tại điểm ckhoản 1 Điều này; quy định ngưỡng bảo đảm chất lượng đầu vào đối với ngành đào tạo giáo viên và ngành thuộc lĩnh vực sức khỏe có cấp chứng chỉ hành nghề.”. 20. Sửa đổi, bổ sung Điều 35 như sau: “ Điều 35. Thời gian đào tạo 1. Thời gian đào tạo được xác định trên cơ sở số lượng tín chỉ phải tích lũy cho từng chương trình và trình độ đào tạo. Số lượng tín chỉ cần tích lũy đối với mỗi trình độ được quy định trong Khung trình độ quốc gia Vi ệt Nam. Hi ệu trưởng cơ sở giáo dục đại học quyết định số lượng tín chỉ phải tích lũy cho từng chương trình và trình độ đào tạo phù hợp với quy định của pháp luật.",
+          "metadata": {
+            "section": "hoat_dong_dao_tao"
+          },
+          "score": 0.5466693336909662
+        }
+      ]
+    },
+    {
+      "id": "q09",
+      "split": "dev",
+      "type": "truc_tiep",
+      "question": "Hệ thống văn bằng giáo dục đại học thuộc hệ thống giáo dục quốc dân bao gồm các loại bằng nào?",
+      "gold_page": 24,
+      "evidence_quote": "Văn bằng giáo dục đại học thuộc hệ thống giáo dục quốc dân bao gồm bằng cử nhân, bằng thạc sĩ, bằng tiến sĩ và văn bằng trình độ tương đương",
+      "filter": null,
+      "hit_rank": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "top_hits": [
+        {
+          "chunk_id": "B_luat-34-2018-qh14_p24_c2",
+          "document_id": "luat-34-2018-qh14",
+          "source": "data/34-2018-qh14..pdf",
+          "page": 24,
+          "text": "4. Căn cứ vào nhu cầu của địa phương và đề xuất của Ủy ban nhân dân cấp tỉnh, cơ sở giáo dục đại học đóng trên địa bàn cung cấp các chương trình giáo dục thường xuyên, giáo dục nghề nghi ệp và giáo dục đại học; tổ chức đào tạo liên thông giữa các trình độ trung cấp, cao đẳng, đại học; đào tạo chuy ển ti ếp cho trường đại học khác. 5. Bộ trưởng Bộ Giáo dục và Đào tạo ban hành quy chế đào tạo các trình độ của giáo dục đại học.”. 23. Sửa đổi, bổ sung Điều 38 như sau: “ Điều 38. Văn bằng giáo dục đại học 1. Văn bằng giáo dục đại học thuộc hệ thống giáo dục quốc dân bao gồm bằng cử nhân, bằng thạc sĩ, bằng tiến sĩ và văn bằng trình độ tương đương.",
+          "metadata": {
+            "section": "hoat_dong_dao_tao"
+          },
+          "score": 0.6225500705132105
+        },
+        {
+          "chunk_id": "B_luat-34-2018-qh14_p26_c5",
+          "document_id": "luat-34-2018-qh14",
+          "source": "data/34-2018-qh14..pdf",
+          "page": 26,
+          "text": "2. Hệ thống bảo đảm chất lượng giáo dục đại học bao gồm hệ thống bảo đảm chất lượng bên trong và hệ thống bảo đảm chất lượng bên ngoài thông qua cơ chế kiểm định chất lượng giáo dục đại học.",
+          "metadata": {
+            "section": "hoat_dong_dao_tao"
+          },
+          "score": 0.6012144745654144
+        },
+        {
+          "chunk_id": "B_luat-34-2018-qh14_p25_c1",
+          "document_id": "luat-34-2018-qh14",
+          "source": "data/34-2018-qh14..pdf",
+          "page": 25,
+          "text": "ngoài; trách nhiệm của cơ sở giáo dục đại học có vốn đầu tư nước ngoài thực hiện việc cấp văn bằng giáo dục đại học tại Việt Nam; điều kiện, trình tự, thủ tục công nhận văn bằng giáo dục đại học do cơ sở giáo dục đại học nước ngoài cấp. 6. Chính phủ ban hành hệ thống văn bằng giáo dục đại học và quy định văn bằng, chứng chỉ đối với một số ngành đào tạo chuyên sâu đặc thù.”. 24. Sửa đổi, bổ sung Điều 42 như sau: “ Điều 42. Trách nhiệm của Nhà nước về phát triển khoa học và công nghệ",
+          "metadata": {
+            "section": "hoat_dong_dao_tao"
+          },
+          "score": 0.5582697564045531
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "split": "dev",
+      "type": "dieu_kien_ngoai_le",
+      "question": "Lĩnh vực nào bị pháp luật cấm không được thực hiện liên kết đào tạo cấp bằng?",
+      "gold_page": 24,
+      "evidence_quote": "không thực hiện liên kết đào tạo đối với các ngành thuộc lĩnh vực sức khỏe có cấp chứng chỉ hành nghề",
+      "filter": null,
+      "hit_rank": 2,
+      "hit_at_1": false,
+      "hit_at_3": true,
+      "top_hits": [
+        {
+          "chunk_id": "B_luat-34-2018-qh14_p25_c3",
+          "document_id": "luat-34-2018-qh14",
+          "source": "data/34-2018-qh14..pdf",
+          "page": 25,
+          "text": "1. Liên kết đào tạo với nước ngoài là việc hợp tác đào tạo giữa cơ sở giáo dục đại học được thành lập ở Việt Nam với cơ sở giáo dục đại học nước ngoài nhằm thực hiện chương trình đào tạo để cấp văn bằng hoặc cấp chứng chỉ, nhưng không hình thành pháp nhân mới. Việc liên kết đào tạo với nước ngoài phải bảo đảm thực hiện quy định của Luật giáo dục và quy định khác của pháp luật có liên quan. 2. Ch ương trình liên kết đào tạo với nước ngoài là chương trình của nước ngoài ho ặc chương trình do hai bên cùng xây dựng. Vi ệc tổ chức đào tạo được thực hi ện toàn bộ tại Vi ệt Nam ho ặc một phần tại Vi ệt Nam và một phần tại nước ngoài.",
+          "metadata": {
+            "section": "hoat_dong_dao_tao"
+          },
+          "score": 0.5683835467900288
+        },
+        {
+          "chunk_id": "B_luat-34-2018-qh14_p24_c1",
+          "document_id": "luat-34-2018-qh14",
+          "source": "data/34-2018-qh14..pdf",
+          "page": 24,
+          "text": "quan nhà nước, tổ chức chính trị, tổ chức chính trị - xã hội, lực lượng vũ trang nhân dân với điều kiện cơ sở được liên kết đào tạo bảo đảm các yêu cầu về môi trường sư phạm, cơ sở vật chất, thiết bị, thư viện và cán bộ quản lý theo yêu cầu của chương trình đào tạo; không thực hiện liên kết đào tạo đối với các ngành thuộc lĩnh vực sức khỏe có cấp chứng chỉ hành nghề. 3. Cơ sở giáo dục đại học có trách nhiệm phối hợp với doanh nghiệp, đơn vị sử dụng lao động trong vi ệc sử dụng chuyên gia, cơ sở vật chất, trang thi ết bị để tổ chức đào tạo thực hành, thực tập nhằm nâng cao kỹ năng thực hành, thực tập và tăng cơ hội việc làm của sinh viên.",
+          "metadata": {
+            "section": "hoat_dong_dao_tao"
+          },
+          "score": 0.5596287958339209
+        },
+        {
+          "chunk_id": "B_luat-34-2018-qh14_p3_c1",
+          "document_id": "luat-34-2018-qh14",
+          "source": "data/34-2018-qh14..pdf",
+          "page": 3,
+          "text": "2. Hình thức đào tạo để cấp văn bằng các trình độ đào tạo của giáo dục đại học bao gồm chính quy, vừa làm vừa học, đào tạo từ xa. Việc chuyển đổi giữa các hình thức đào tạo được thực hiện theo nguyên tắc liên thông. 3. Cơ sở giáo dục đại học được tổ chức ho ạt động giáo dục thường xuyên, cung cấp dịch vụ đào tạo, bồi dưỡng ngắn hạn cấp chứng chỉ, chứng nhận phù hợp với ngành, lĩnh vực đào tạo của mỗi cơ sở theo quy định của pháp luật để đáp ứng nhu cầu học tập suốt đời của người học. 4. Chính phủ quy định trình độ đào tạo đối với một số ngành đào tạo chuyên sâu đặc thù.”. 4. Sửa đổi, bổ sung Điều 7 như sau: “ Điều 7. Cơ sở giáo dục đại học",
+          "metadata": {
+            "section": "he_thong_co_so_gd"
+          },
+          "score": 0.5586825868887337
+        }
+      ]
+    },
+    {
+      "id": "q11",
+      "split": "dev",
+      "type": "metadata_filter",
+      "question": "Hoạt động liên kết đào tạo với nước ngoài có được hình thành pháp nhân mới hay không?",
+      "gold_page": 25,
+      "evidence_quote": "Liên kết đào tạo với nước ngoài là việc hợp tác đào tạo giữa cơ sở giáo dục đại học được thành lập ở Việt Nam với cơ sở giáo dục đại học nước ngoài",
+      "filter": {
+        "section": "hoat_dong_dao_tao"
+      },
+      "hit_rank": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "top_hits": [
+        {
+          "chunk_id": "B_luat-34-2018-qh14_p25_c3",
+          "document_id": "luat-34-2018-qh14",
+          "source": "data/34-2018-qh14..pdf",
+          "page": 25,
+          "text": "1. Liên kết đào tạo với nước ngoài là việc hợp tác đào tạo giữa cơ sở giáo dục đại học được thành lập ở Việt Nam với cơ sở giáo dục đại học nước ngoài nhằm thực hiện chương trình đào tạo để cấp văn bằng hoặc cấp chứng chỉ, nhưng không hình thành pháp nhân mới. Việc liên kết đào tạo với nước ngoài phải bảo đảm thực hiện quy định của Luật giáo dục và quy định khác của pháp luật có liên quan. 2. Ch ương trình liên kết đào tạo với nước ngoài là chương trình của nước ngoài ho ặc chương trình do hai bên cùng xây dựng. Vi ệc tổ chức đào tạo được thực hi ện toàn bộ tại Vi ệt Nam ho ặc một phần tại Vi ệt Nam và một phần tại nước ngoài.",
+          "metadata": {
+            "section": "hoat_dong_dao_tao"
+          },
+          "score": 0.699176996362364
+        },
+        {
+          "chunk_id": "B_luat-34-2018-qh14_p25_c2",
+          "document_id": "luat-34-2018-qh14",
+          "source": "data/34-2018-qh14..pdf",
+          "page": 25,
+          "text": "1. Nhà nước tập trung đầu tư phát triển tiềm lực khoa học và công nghệ, tạo cơ chế, chính sách khuy ến khích tổ chức, cá nhân tham gia đầu tư phát triển tiềm lực khoa học và công nghệ, phát tri ển hệ sinh thái khởi nghiệp sáng tạo trong cơ sở giáo dục đại học phục vụ phát triển đất nước; ưu tiên phát triển một số ngành, lĩnh vực đạt trình độ nghiên cứu ngang tầm khu vực và quốc tế. 2. Chính phủ quy định về hoạt động khoa học và công nghệ trong cơ sở giáo dục đại học.”. 25. Sửa đổi, bổ sung Điều 45 như sau: “ Điều 45. Liên kết đào tạo với nước ngoài",
+          "metadata": {
+            "section": "hoat_dong_dao_tao"
+          },
+          "score": 0.5933217087501547
+        },
+        {
+          "chunk_id": "B_luat-34-2018-qh14_p26_c4",
+          "document_id": "luat-34-2018-qh14",
+          "source": "data/34-2018-qh14..pdf",
+          "page": 26,
+          "text": "8. Cơ sở giáo dục đại học tự liên kết đào tạo khi chưa bảo đảm điều kiện theo quy định hoặc vi phạm điều kiện bảo đảm chất lượng giáo dục trong đề án liên kết đào tạo với nước ngoài thì bị đình chỉ hoạt động liên kết đào tạo, không được tự chủ liên kết đào tạo với nước ngoài trong thời hạn 05 năm, kể từ khi có kết luận về việc vi phạm của cơ quan có thẩm quyền.”. 26. Sửa đổi, bổ sung Điều 49 như sau: “ Điều 49. Bảo đảm chất lượng giáo dục đại học; mục tiêu, nguyên tắc và đối tượng kiểm định chất lượng giáo dục đại học 1. Bảo đảm chất lượng giáo dục đại học là quá trình liên tục, mang tính hệ thống, bao gồm các chính sách, cơ chế, tiêu chuẩn, quy trình, biện pháp nhằm duy trì và nâng cao chất lượng giáo dục đại học.",
+          "metadata": {
+            "section": "hoat_dong_dao_tao"
+          },
+          "score": 0.5905932972316934
+        }
+      ]
+    },
+    {
+      "id": "q12",
+      "split": "dev",
+      "type": "truc_tiep",
+      "question": "Kiểm định chất lượng giáo dục đại học phải tuân thủ những nguyên tắc nào?",
+      "gold_page": 27,
+      "evidence_quote": "Nguyên tắc kiểm định chất lượng giáo dục đại học được quy định như sau: a) Độc lập, khách quan, đúng pháp luật; b) Trung thực, công khai, minh bạch; c) Bình đẳng, bắt buộc, định kỳ",
+      "filter": null,
+      "hit_rank": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "top_hits": [
+        {
+          "chunk_id": "B_luat-34-2018-qh14_p27_c2",
+          "document_id": "luat-34-2018-qh14",
+          "source": "data/34-2018-qh14..pdf",
+          "page": 27,
+          "text": "5. Nguyên tắc kiểm định chất lượng giáo dục đại học được quy định như sau: a) Độc lập, khách quan, đúng pháp luật; b) Trung thực, công khai, minh bạch; c) Bình đẳng, bắt buộc, định kỳ. 6. Đối tượng kiểm định chất lượng giáo dục đại học bao gồm: a) Cơ sở giáo dục đại học; b) Chương trình đào tạo các trình độ của giáo dục đại học.”. 27. Sửa đổi, bổ sung Điều 50 như sau: “ Điều 50. Trách nhiệm của cơ sở giáo dục đại học trong việc bảo đảm chất lượng giáo dục đại học 1. Xây dựng và phát tri ển hệ thống bảo đảm chất lượng giáo dục bên trong cơ sở giáo dục đại học phù hợp với sứ mạng, mục tiêu và điều kiện thực tế của cơ sở giáo dục đại học. 2. Xây dựng chính sách, kế hoạch bảo đảm chất lượng giáo dục đại học.",
+          "metadata": {
+            "section": "kiem_dinh_chat_luong"
+          },
+          "score": 0.7244294181406653
+        },
+        {
+          "chunk_id": "B_luat-34-2018-qh14_p20_c1",
+          "document_id": "luat-34-2018-qh14",
+          "source": "data/34-2018-qh14..pdf",
+          "page": 20,
+          "text": "2. Điều kiện thực hiện quyền tự chủ của cơ sở giáo dục đại học được quy định như sau: a) Đã thành lập hội đồng trường, hội đồng đại học; đã được công nhận đạt chuẩn chất lượng cơ sở giáo dục đại học bởi tổ chức kiểm định chất lượng giáo dục hợp pháp; b) Đã ban hành và tổ chức thực hiện quy chế tổ chức và hoạt động; quy chế tài chính; quy chế, quy trình, quy định quản lý nội bộ khác và có chính sách bảo đảm chất lượng đáp ứng tiêu chuẩn do Nhà nước quy định; c) Thực hiện phân quyền tự chủ và trách nhi ệm giải trình đến từng đơn vị, cá nhân trong cơ sở giáo dục đại học; d) Công khai điều kiện bảo đảm chất lượng, kết quả kiểm định, tỷ lệ sinh viên tốt nghiệp có việc làm và thông tin khác theo quy định của pháp luật.",
+          "metadata": {
+            "section": "quyen_tu_chu"
+          },
+          "score": 0.6549188087604526
+        },
+        {
+          "chunk_id": "B_luat-34-2018-qh14_p26_c5",
+          "document_id": "luat-34-2018-qh14",
+          "source": "data/34-2018-qh14..pdf",
+          "page": 26,
+          "text": "2. Hệ thống bảo đảm chất lượng giáo dục đại học bao gồm hệ thống bảo đảm chất lượng bên trong và hệ thống bảo đảm chất lượng bên ngoài thông qua cơ chế kiểm định chất lượng giáo dục đại học.",
+          "metadata": {
+            "section": "hoat_dong_dao_tao"
+          },
+          "score": 0.6449961790386121
+        }
+      ]
+    },
+    {
+      "id": "q13",
+      "split": "dev",
+      "type": "dien_dat_lai",
+      "question": "Mục tiêu của việc kiểm định chất lượng giáo dục đại học là gì?",
+      "gold_page": 27,
+      "evidence_quote": "Mục tiêu của kiểm định chất lượng giáo dục đại học được quy định như sau: a) Bảo đảm và nâng cao chất lượng giáo dục đại học; b) Xác nhận mức độ đáp ứng mục tiêu của cơ sở giáo dục đại học hoặc chương trình đào tạo trong từng giai đoạn",
+      "filter": null,
+      "hit_rank": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "top_hits": [
+        {
+          "chunk_id": "B_luat-34-2018-qh14_p27_c1",
+          "document_id": "luat-34-2018-qh14",
+          "source": "data/34-2018-qh14..pdf",
+          "page": 27,
+          "text": "3. Bộ trưởng Bộ Giáo dục và Đào tạo ban hành chuẩn chương trình đào tạo các trình độ của giáo dục đại học và yêu cầu tối thiểu để thực hiện chương trình đào tạo; tiêu chuẩn đánh giá chất lượng, quy trình và chu kỳ kiểm định chất lượng giáo dục đại học. 4. Mục tiêu của kiểm định chất lượng giáo dục đại học được quy định như sau: a) Bảo đảm và nâng cao chất lượng giáo dục đại học; b) Xác nhận mức độ đáp ứng mục tiêu của cơ sở giáo dục đại học hoặc chương trình đào tạo trong từng giai đoạn; c) Làm căn cứ để cơ sở giáo dục đại học giải trình với chủ sở hữu, cơ quan có thẩm quyền, các bên liên quan và xã hội về thực trạng chất lượng đào tạo; d) Làm cơ sở cho người học lựa chọn cơ sở giáo dục đại học, chương trình đào tạo; cho nhà tuyển dụng lao động tuyển chọn nhân lực.",
+          "metadata": {
+            "section": "kiem_dinh_chat_luong"
+          },
+          "score": 0.7191808145898431
+        },
+        {
+          "chunk_id": "B_luat-34-2018-qh14_p27_c2",
+          "document_id": "luat-34-2018-qh14",
+          "source": "data/34-2018-qh14..pdf",
+          "page": 27,
+          "text": "5. Nguyên tắc kiểm định chất lượng giáo dục đại học được quy định như sau: a) Độc lập, khách quan, đúng pháp luật; b) Trung thực, công khai, minh bạch; c) Bình đẳng, bắt buộc, định kỳ. 6. Đối tượng kiểm định chất lượng giáo dục đại học bao gồm: a) Cơ sở giáo dục đại học; b) Chương trình đào tạo các trình độ của giáo dục đại học.”. 27. Sửa đổi, bổ sung Điều 50 như sau: “ Điều 50. Trách nhiệm của cơ sở giáo dục đại học trong việc bảo đảm chất lượng giáo dục đại học 1. Xây dựng và phát tri ển hệ thống bảo đảm chất lượng giáo dục bên trong cơ sở giáo dục đại học phù hợp với sứ mạng, mục tiêu và điều kiện thực tế của cơ sở giáo dục đại học. 2. Xây dựng chính sách, kế hoạch bảo đảm chất lượng giáo dục đại học.",
+          "metadata": {
+            "section": "kiem_dinh_chat_luong"
+          },
+          "score": 0.6983961890436858
+        },
+        {
+          "chunk_id": "B_luat-34-2018-qh14_p26_c5",
+          "document_id": "luat-34-2018-qh14",
+          "source": "data/34-2018-qh14..pdf",
+          "page": 26,
+          "text": "2. Hệ thống bảo đảm chất lượng giáo dục đại học bao gồm hệ thống bảo đảm chất lượng bên trong và hệ thống bảo đảm chất lượng bên ngoài thông qua cơ chế kiểm định chất lượng giáo dục đại học.",
+          "metadata": {
+            "section": "hoat_dong_dao_tao"
+          },
+          "score": 0.6544826267154852
+        }
+      ]
+    },
+    {
+      "id": "q14",
+      "split": "dev",
+      "type": "truc_tiep",
+      "question": "Chức danh giảng viên trong cơ sở giáo dục đại học bao gồm những ngạch, chức danh nào?",
+      "gold_page": 29,
+      "evidence_quote": "Chức danh giảng viên bao gồm trợ giảng, giảng viên, giảng viên chính, phó giáo sư, giáo sư",
+      "filter": null,
+      "hit_rank": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "top_hits": [
+        {
+          "chunk_id": "B_luat-34-2018-qh14_p29_c1",
+          "document_id": "luat-34-2018-qh14",
+          "source": "data/34-2018-qh14..pdf",
+          "page": 29,
+          "text": "công nhận, thu hồi quy ết định công nhận ho ạt động của tổ chức ki ểm định chất lượng giáo dục nước ngoài ở Việt Nam; quy định việc giám sát, đánh giá tổ chức kiểm định chất lượng giáo dục.”. 29. Sửa đổi, bổ sung Điều 54 như sau: “ Điều 54. Giảng viên 1. Giảng viên trong cơ sở giáo dục đại học là người có nhân thân rõ ràng; có phẩm chất, đạo đức tốt; có đủ sức khỏe để thực hiện nhiệm vụ; có trình độ đáp ứng quy định của Luật này, quy chế tổ chức và hoạt động của cơ sở giáo dục đại học. 2. Chức danh giảng viên bao gồm trợ giảng, giảng viên, giảng viên chính, phó giáo sư, giáo sư. Cơ sở giáo dục đại học bổ nhiệm chức danh giảng viên theo quy định của pháp lu ật, quy chế tổ chức và ho ạt động, quy định về vị trí vi ệc làm và nhu cầu sử dụng của cơ sở giáo dục đại học.",
+          "metadata": {
+            "section": "kiem_dinh_chat_luong"
+          },
+          "score": 0.6271270106178055
+        },
+        {
+          "chunk_id": "B_luat-34-2018-qh14_p29_c2",
+          "document_id": "luat-34-2018-qh14",
+          "source": "data/34-2018-qh14..pdf",
+          "page": 29,
+          "text": "3. Trình độ tối thiểu của chức danh giảng viên giảng dạy trình độ đại học là thạc sĩ, trừ chức danh trợ giảng; trình độ của chức danh giảng viên giảng dạy trình độ thạc sĩ, tiến sĩ là ti ến sĩ. Cơ sở giáo dục đại học ưu tiên tuy ển dụng người có trình độ tiến sĩ làm giảng viên; phát triển, ưu đãi đội ngũ giáo sư đầu ngành để phát triển các ngành đào tạo. 4. Bộ trưởng Bộ Giáo dục và Đào tạo quy định tiêu chu ẩn và vi ệc bổ nhiệm chức danh giảng viên theo thẩm quyền; tỷ lệ giảng viên cơ hữu tối thiểu của cơ sở giáo dục đại học; quy định tiêu chuẩn giảng viên thực hành, giảng viên của một số ngành đào tạo chuyên sâu đặc thù.”. 30. Sửa đổi, bổ sung một số khoản của Điều 55 như sau: a) Sửa đổi, bổ sung khoản 1 như sau: “",
+          "metadata": {
+            "section": "kiem_dinh_chat_luong"
+          },
+          "score": 0.6252436593406557
+        },
+        {
+          "chunk_id": "B_luat-34-2018-qh14_p16_c4",
+          "document_id": "luat-34-2018-qh14",
+          "source": "data/34-2018-qh14..pdf",
+          "page": 16,
+          "text": "d) Thủ tục hội đồng đại học quyết định nhân sự giám đốc đại học, việc quyết định chức danh quản lý khác thu ộc thẩm quy ền của đại học trong quy trình bổ nhiệm nhân sự; căn cứ và thủ tục đề xuất bãi nhiệm, miễn nhiệm giám đốc đại học; số lượng cán bộ cấp phó thuộc thẩm quyền quyết định của đại học; thời gian tối đa giữ chức vụ giám đốc đại học, phó giám đốc đại học và chức danh quản lý khác trong đơn vị thuộc đại học;",
+          "metadata": {
+            "section": "to_chuc_quan_tri"
+          },
+          "score": 0.4697870387092251
+        }
+      ]
+    },
+    {
+      "id": "q15",
+      "split": "dev",
+      "type": "dieu_kien_ngoai_le",
+      "question": "Trình độ chuẩn tối thiểu để giảng dạy trình độ đại học và sau đại học được quy định như thế nào?",
+      "gold_page": 29,
+      "evidence_quote": "Trình độ tối thiểu của chức danh giảng viên giảng dạy trình độ đại học là thạc sĩ, trừ chức danh trợ giảng; trình độ của chức danh giảng viên giảng dạy trình độ thạc sĩ, tiến sĩ là tiến sĩ",
+      "filter": null,
+      "hit_rank": null,
+      "hit_at_1": false,
+      "hit_at_3": false,
+      "top_hits": [
+        {
+          "chunk_id": "B_luat-34-2018-qh14_p29_c2",
+          "document_id": "luat-34-2018-qh14",
+          "source": "data/34-2018-qh14..pdf",
+          "page": 29,
+          "text": "3. Trình độ tối thiểu của chức danh giảng viên giảng dạy trình độ đại học là thạc sĩ, trừ chức danh trợ giảng; trình độ của chức danh giảng viên giảng dạy trình độ thạc sĩ, tiến sĩ là ti ến sĩ. Cơ sở giáo dục đại học ưu tiên tuy ển dụng người có trình độ tiến sĩ làm giảng viên; phát triển, ưu đãi đội ngũ giáo sư đầu ngành để phát triển các ngành đào tạo. 4. Bộ trưởng Bộ Giáo dục và Đào tạo quy định tiêu chu ẩn và vi ệc bổ nhiệm chức danh giảng viên theo thẩm quyền; tỷ lệ giảng viên cơ hữu tối thiểu của cơ sở giáo dục đại học; quy định tiêu chuẩn giảng viên thực hành, giảng viên của một số ngành đào tạo chuyên sâu đặc thù.”. 30. Sửa đổi, bổ sung một số khoản của Điều 55 như sau: a) Sửa đổi, bổ sung khoản 1 như sau: “",
+          "metadata": {
+            "section": "kiem_dinh_chat_luong"
+          },
+          "score": 0.5950193343551474
+        },
+        {
+          "chunk_id": "B_luat-34-2018-qh14_p24_c2",
+          "document_id": "luat-34-2018-qh14",
+          "source": "data/34-2018-qh14..pdf",
+          "page": 24,
+          "text": "4. Căn cứ vào nhu cầu của địa phương và đề xuất của Ủy ban nhân dân cấp tỉnh, cơ sở giáo dục đại học đóng trên địa bàn cung cấp các chương trình giáo dục thường xuyên, giáo dục nghề nghi ệp và giáo dục đại học; tổ chức đào tạo liên thông giữa các trình độ trung cấp, cao đẳng, đại học; đào tạo chuy ển ti ếp cho trường đại học khác. 5. Bộ trưởng Bộ Giáo dục và Đào tạo ban hành quy chế đào tạo các trình độ của giáo dục đại học.”. 23. Sửa đổi, bổ sung Điều 38 như sau: “ Điều 38. Văn bằng giáo dục đại học 1. Văn bằng giáo dục đại học thuộc hệ thống giáo dục quốc dân bao gồm bằng cử nhân, bằng thạc sĩ, bằng tiến sĩ và văn bằng trình độ tương đương.",
+          "metadata": {
+            "section": "hoat_dong_dao_tao"
+          },
+          "score": 0.5735258173934545
+        },
+        {
+          "chunk_id": "B_luat-34-2018-qh14_p20_c1",
+          "document_id": "luat-34-2018-qh14",
+          "source": "data/34-2018-qh14..pdf",
+          "page": 20,
+          "text": "2. Điều kiện thực hiện quyền tự chủ của cơ sở giáo dục đại học được quy định như sau: a) Đã thành lập hội đồng trường, hội đồng đại học; đã được công nhận đạt chuẩn chất lượng cơ sở giáo dục đại học bởi tổ chức kiểm định chất lượng giáo dục hợp pháp; b) Đã ban hành và tổ chức thực hiện quy chế tổ chức và hoạt động; quy chế tài chính; quy chế, quy trình, quy định quản lý nội bộ khác và có chính sách bảo đảm chất lượng đáp ứng tiêu chuẩn do Nhà nước quy định; c) Thực hiện phân quyền tự chủ và trách nhi ệm giải trình đến từng đơn vị, cá nhân trong cơ sở giáo dục đại học; d) Công khai điều kiện bảo đảm chất lượng, kết quả kiểm định, tỷ lệ sinh viên tốt nghiệp có việc làm và thông tin khác theo quy định của pháp luật.",
+          "metadata": {
+            "section": "quyen_tu_chu"
+          },
+          "score": 0.5512014643929266
+        }
+      ]
+    },
+    {
+      "id": "q16",
+      "split": "test",
+      "type": "truc_tiep",
+      "question": "Nguồn tài chính của cơ sở giáo dục đại học bao gồm những khoản thu chủ yếu nào?",
+      "gold_page": 30,
+      "evidence_quote": "Nguồn tài chính của cơ sở giáo dục đại học bao gồm: a) Học phí và các khoản thu từ người học; b) Thu từ hoạt động khoa học và công nghệ",
+      "filter": null,
+      "hit_rank": null,
+      "hit_at_1": false,
+      "hit_at_3": false,
+      "top_hits": [
+        {
+          "chunk_id": "B_luat-34-2018-qh14_p30_c3",
+          "document_id": "luat-34-2018-qh14",
+          "source": "data/34-2018-qh14..pdf",
+          "page": 30,
+          "text": "c) Khoản thu từ đầu tư của tổ chức, cá nhân trong nước và nước ngoài; nguồn tài chính bổ sung từ kết quả hoạt động hàng năm của cơ sở giáo dục đại học; d) Khoản thu từ hoạt động kinh doanh, dịch vụ phục vụ cộng đồng, đầu tư tài chính (nếu có) và nguồn thu hợp pháp khác; đ) Nguồn vốn vay. 2. Các nguồn tài trợ, viện trợ, quà biếu, tặng, cho của cựu sinh viên, tổ chức, cá nhân trong nước và nước ngoài. 3. Ngân sách nhà nước cấp (nếu có).”.",
+          "metadata": {
+            "section": "giang_vien_nguoi_hoc"
+          },
+          "score": 0.6551227340837461
+        },
+        {
+          "chunk_id": "B_luat-34-2018-qh14_p32_c3",
+          "document_id": "luat-34-2018-qh14",
+          "source": "data/34-2018-qh14..pdf",
+          "page": 32,
+          "text": "5. Hàng năm, cơ sở giáo dục đại học phải thực hiện kiểm toán và công khai tài chính, việc sử dụng các nguồn tài chính phải theo quy định của pháp luật. 6. Chính phủ quy định chi tiết khoản 2 Điều này, mức độ tự chủ tài chính của cơ sở giáo dục đại học công lập không thuộc trường hợp quy định tại khoản 2 Điều này; cơ chế giao nhiệm vụ, đặt hàng hoặc đấu thầu cung cấp dịch vụ công sử dụng ngân sách nhà nước đối với cơ sở giáo dục đại học; quy định về hợp tác, đầu tư nước ngoài trong lĩnh vực giáo dục đại học; việc rút vốn và chuy ển nhượng vốn đầu tư vào cơ sở giáo dục đại học, bảo đảm sự ổn định và phát triển cơ sở giáo dục đại học. 7. Bộ Giáo dục và Đào tạo, cơ quan có thẩm quyền thanh tra, ki ểm tra vi ệc quản lý và sử dụng nguồn tài chính của cơ sở giáo dục đại học.”.",
+          "metadata": {
+            "section": "tai_chinh_tai_san"
+          },
+          "score": 0.6408693667782375
+        },
+        {
+          "chunk_id": "B_luat-34-2018-qh14_p32_c2",
+          "document_id": "luat-34-2018-qh14",
+          "source": "data/34-2018-qh14..pdf",
+          "page": 32,
+          "text": "4. Phần tài chính chênh lệch giữa thu và chi từ hoạt động đào tạo, khoa học và công nghệ của cơ sở giáo dục đại học tư thục phải dành ít nhất là 25% để đầu tư phát triển cơ sở giáo dục đại học, cho các ho ạt động giáo dục, xây dựng cơ sở vật chất, mua sắm trang thi ết bị, đào tạo, bồi dưỡng giảng viên, cán bộ quản lý giáo dục, người lao động, phục vụ cho hoạt động học tập và sinh hoạt của người học và thực hi ện trách nhi ệm xã hội. Đối với cơ sở giáo dục đại học tư thục ho ạt động không vì lợi nhuận, toàn bộ phần tài chính chênh lệch giữa thu và chi tích lũy hàng năm là tài sản chung hợp nhất không phân chia của cộng đồng nhà trường để tiếp tục đầu tư phát triển cơ sở giáo dục đại học.",
+          "metadata": {
+            "section": "tai_chinh_tai_san"
+          },
+          "score": 0.6407569858135865
+        }
+      ]
+    },
+    {
+      "id": "q17",
+      "split": "test",
+      "type": "metadata_filter",
+      "question": "Khái niệm học phí trong cơ sở giáo dục đại học được định nghĩa như thế nào?",
+      "gold_page": 31,
+      "evidence_quote": "Học phí là khoản tiền mà người học phải nộp cho cơ sở giáo dục đại học để bù đắp một phần hoặc toàn bộ chi phí đào tạo",
+      "filter": {
+        "section": "tai_chinh_tai_san"
+      },
+      "hit_rank": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "top_hits": [
+        {
+          "chunk_id": "B_luat-34-2018-qh14_p31_c1",
+          "document_id": "luat-34-2018-qh14",
+          "source": "data/34-2018-qh14..pdf",
+          "page": 31,
+          "text": "33. Sửa đổi, bổ sung Điều 65 như sau: “ Điều 65. Học phí và khoản thu dịch vụ khác 1. Học phí là khoản tiền mà người học phải nộp cho cơ sở giáo dục đại học để bù đắp một phần hoặc toàn bộ chi phí đào tạo. 2. Cơ sở giáo dục đại học công lập xác định mức thu học phí như sau: a) Cơ sở giáo dục đại học đáp ứng điều kiện quy định tại khoản 2 Điều 32 của Luật này và tự bảo đảm toàn bộ kinh phí chi thường xuyên được tự chủ xác định mức thu học phí; b) Cơ sở giáo dục đại học không thuộc trường hợp quy định tại điểm a kho ản này được xác định mức thu học phí theo quy định của Chính phủ; c) Việc xác định mức thu học phí phải căn cứ vào định mức kinh tế - kỹ thuật theo lộ trình tính đúng, tính đủ chi phí đào tạo. 3. Cơ sở giáo dục đại học tư thục được tự chủ quyết định mức thu học phí.",
+          "metadata": {
+            "section": "tai_chinh_tai_san"
+          },
+          "score": 0.6439690191690214
+        },
+        {
+          "chunk_id": "B_luat-34-2018-qh14_p31_c2",
+          "document_id": "luat-34-2018-qh14",
+          "source": "data/34-2018-qh14..pdf",
+          "page": 31,
+          "text": "4. Mức thu dịch vụ tuyển sinh và kho ản thu dịch vụ khác được xác định trên nguyên tắc tính đủ chi phí hợp lý thực tế phát sinh. 5. Cơ sở giáo dục đại học phải công bố công khai chi phí đào tạo, mức thu học phí, mức thu dịch vụ tuyển sinh và kho ản thu dịch vụ khác cho lộ trình cả khóa học, từng năm học cùng với thông báo tuy ển sinh và trên trang thông tin điện tử của cơ sở giáo dục đại học; có trách nhiệm trích một phần nguồn thu học phí để hỗ trợ sinh viên có hoàn cảnh khó khăn.”. 34. Sửa đổi, bổ sung Điều 66 như sau: “ Điều 66. Quản lý tài chính của cơ sở giáo dục đại học 1. Cơ sở giáo dục đại học thực hiện chế độ tài chính, kế toán, kiểm toán, thuế, định giá tài sản và công khai tài chính theo quy định của pháp luật.",
+          "metadata": {
+            "section": "tai_chinh_tai_san"
+          },
+          "score": 0.5480774428461986
+        },
+        {
+          "chunk_id": "B_luat-34-2018-qh14_p31_c3",
+          "document_id": "luat-34-2018-qh14",
+          "source": "data/34-2018-qh14..pdf",
+          "page": 31,
+          "text": "2. Đối với cơ sở giáo dục đại học công lập tự bảo đảm toàn bộ kinh phí chi thường xuyên, hội đồng trường, hội đồng đại học quyết định việc sử dụng nguồn tài chính như sau: a) Quyết định sử dụng nguồn thu hợp pháp ngoài ngân sách nhà nước cấp để đầu tư các dự án thực hiện hoạt động đào tạo, nghiên cứu khoa học, chuyển giao công nghệ; b) Quy ết định nội dung và mức chi từ ngu ồn thu học phí và thu sự nghi ệp, nguồn kinh phí đặt hàng, giao nhiệm vụ, bao gồm cả chi tiền lương, chi hoạt động chuyên môn, chi quản lý theo quy định của quy chế chi tiêu nội bộ của cơ sở giáo dục đại học.",
+          "metadata": {
+            "section": "tai_chinh_tai_san"
+          },
+          "score": 0.5327043737957647
+        }
+      ]
+    },
+    {
+      "id": "q18",
+      "split": "test",
+      "type": "dieu_kien_ngoai_le",
+      "question": "Trường đại học công lập nào có quyền tự chủ tự quyết định mức thu học phí?",
+      "gold_page": 31,
+      "evidence_quote": "tự bảo đảm toàn bộ kinh phí chi thường xuyên được tự chủ xác định mức thu học phí",
+      "filter": null,
+      "hit_rank": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "top_hits": [
+        {
+          "chunk_id": "B_luat-34-2018-qh14_p31_c1",
+          "document_id": "luat-34-2018-qh14",
+          "source": "data/34-2018-qh14..pdf",
+          "page": 31,
+          "text": "33. Sửa đổi, bổ sung Điều 65 như sau: “ Điều 65. Học phí và khoản thu dịch vụ khác 1. Học phí là khoản tiền mà người học phải nộp cho cơ sở giáo dục đại học để bù đắp một phần hoặc toàn bộ chi phí đào tạo. 2. Cơ sở giáo dục đại học công lập xác định mức thu học phí như sau: a) Cơ sở giáo dục đại học đáp ứng điều kiện quy định tại khoản 2 Điều 32 của Luật này và tự bảo đảm toàn bộ kinh phí chi thường xuyên được tự chủ xác định mức thu học phí; b) Cơ sở giáo dục đại học không thuộc trường hợp quy định tại điểm a kho ản này được xác định mức thu học phí theo quy định của Chính phủ; c) Việc xác định mức thu học phí phải căn cứ vào định mức kinh tế - kỹ thuật theo lộ trình tính đúng, tính đủ chi phí đào tạo. 3. Cơ sở giáo dục đại học tư thục được tự chủ quyết định mức thu học phí.",
+          "metadata": {
+            "section": "tai_chinh_tai_san"
+          },
+          "score": 0.6077728106596504
+        },
+        {
+          "chunk_id": "B_luat-34-2018-qh14_p31_c3",
+          "document_id": "luat-34-2018-qh14",
+          "source": "data/34-2018-qh14..pdf",
+          "page": 31,
+          "text": "2. Đối với cơ sở giáo dục đại học công lập tự bảo đảm toàn bộ kinh phí chi thường xuyên, hội đồng trường, hội đồng đại học quyết định việc sử dụng nguồn tài chính như sau: a) Quyết định sử dụng nguồn thu hợp pháp ngoài ngân sách nhà nước cấp để đầu tư các dự án thực hiện hoạt động đào tạo, nghiên cứu khoa học, chuyển giao công nghệ; b) Quy ết định nội dung và mức chi từ ngu ồn thu học phí và thu sự nghi ệp, nguồn kinh phí đặt hàng, giao nhiệm vụ, bao gồm cả chi tiền lương, chi hoạt động chuyên môn, chi quản lý theo quy định của quy chế chi tiêu nội bộ của cơ sở giáo dục đại học.",
+          "metadata": {
+            "section": "tai_chinh_tai_san"
+          },
+          "score": 0.6058063981722639
+        },
+        {
+          "chunk_id": "B_luat-34-2018-qh14_p14_c1",
+          "document_id": "luat-34-2018-qh14",
+          "source": "data/34-2018-qh14..pdf",
+          "page": 14,
+          "text": "Điều 16 của Luật này; quy định tỷ lệ đại diện nhà đầu tư trong tổng số thành viên hội đồng trường đại học. 6. Chính phủ quy định chi ti ết thủ tục thành lập, công nhận hội đồng trường; việc công nhận, bãi nhiệm, miễn nhiệm chủ tịch hội đồng trường.”. 13. Sửa đổi, bổ sung Điều 18 như sau: “ Điều 18. Hội đồng đại học 1. Hội đồng đại học công lập có trách nhiệm và quyền hạn sau đây: a) Quyết định về chiến lược, kế hoạch phát tri ển, kế hoạch hàng năm của đại học, việc kết nạp thành viên mới, tổ chức lại đại học theo quy định của pháp luật; b) Ban hành quy chế tổ chức và hoạt động, quy chế tài chính, quy chế dân chủ ở cơ sở của đại học, trừ trường hợp quy định tại khoản 2 Điều 29 của Luật này, phù hợp với quy định của Luật này và quy định khác của pháp luật có liên quan;",
+          "metadata": {
+            "section": "to_chuc_quan_tri"
+          },
+          "score": 0.5625994951877439
+        }
+      ]
+    },
+    {
+      "id": "q19",
+      "split": "test",
+      "type": "truc_tiep",
+      "question": "Luật sửa đổi, bổ sung một số điều của Luật Giáo dục đại học (Luật số 34/2018/QH14) chính thức có hiệu lực thi hành từ ngày nào?",
+      "gold_page": 35,
+      "evidence_quote": "Luật này có hiệu lực thi hành từ ngày 01 tháng 07 năm 2019",
+      "filter": null,
+      "hit_rank": 2,
+      "hit_at_1": false,
+      "hit_at_3": true,
+      "top_hits": [
+        {
+          "chunk_id": "B_luat-34-2018-qh14_p1_c1",
+          "document_id": "luat-34-2018-qh14",
+          "source": "data/34-2018-qh14..pdf",
+          "page": 1,
+          "text": "QUỐC HỘI Luật số: 34/2018/QH14 CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM Độc lập - Tự do - Hạnh phúc LUẬT SỬA ĐỔI, BỔ SUNG MỘT SỐ ĐIỀU CỦA LUẬT GIÁO DỤC ĐẠI HỌC Căn cứ Hiến pháp nước Cộng hòa xã hội chủ nghĩa Việt Nam; Quốc hội ban hành Luật sửa đổi, bổ sung một số điều của Luật Giáo dục đại học số 08/2012/QH13 đã được sửa đổi, bổ sung một số điều theo Luật số 32/2013/QH13, Luật số 74/2014/QH13 và Luật số 97/2015/QH13. Điều 1. Sửa đổi, bổ sung một số điều của Luật Giáo dục đại học 1. Sửa đổi, bổ sung Điều 2 như sau: “ Điều 2. Đối tượng áp dụng 1. Luật này áp dụng đối với cơ sở giáo dục đại học, tổ chức và cá nhân có liên quan đến giáo dục đại học.",
+          "metadata": {
+            "section": "he_thong_co_so_gd"
+          },
+          "score": 0.6527954072710075
+        },
+        {
+          "chunk_id": "B_luat-34-2018-qh14_p35_c2",
+          "document_id": "luat-34-2018-qh14",
+          "source": "data/34-2018-qh14..pdf",
+          "page": 35,
+          "text": "2. Bỏ cụm từ “ được thành lập theo quy ết định của hi ệu trưởng trường đại học, giám đốc học vi ện, đại học,” và “cho hi ệu trưởng, giám đốc” tại kho ản 1 Điều 19; cụm từ “quy ho ạch phát tri ển kinh tế - xã hội và” tại điểm a kho ản 1 Điều 22; từ “, học viện” tại Điều 27 và Điều 28; cụm từ “, viện nghiên cứu khoa học được phép đào tạo trình độ tiến sĩ” tại kho ản 4 Điều 27; từ “Thủ tướng” tại khoản 1 Điều 27 và khoản 2 Điều 48; cụm từ “và quy hoạch” tại khoản 1 Điều 48; cụm từ “ Điều 74 của” tại khoản 1 Điều 57; cụm từ “tại các điều 89, 90, 91 và 92” tại khoản 1 Điều 62. Điều 3. Điều khoản thi hành Luật này có hiệu lực thi hành từ ngày 01 tháng 07 năm 2019. Luật này được Quốc hội nước Cộng hòa xã hội chủ nghĩa Việt Nam khóa XIV, kỳ họp thứ 6 thông qua ngày 19 tháng 11 năm",
+          "metadata": {
+            "section": "dieu_khoan_thi_hanh"
+          },
+          "score": 0.6503856960876233
+        },
+        {
+          "chunk_id": "B_luat-34-2018-qh14_p35_c1",
+          "document_id": "luat-34-2018-qh14",
+          "source": "data/34-2018-qh14..pdf",
+          "page": 35,
+          "text": "tra việc chấp hành pháp luật về giáo dục của cơ sở giáo dục đại học tại địa phương; thực hi ện xã hội hóa giáo dục đại học; bảo đảm đáp ứng yêu cầu nâng cao chất lượng và hiệu quả giáo dục đại học tại địa phương.”. Điều 2. Thay thế, bỏ một số từ, cụm từ tại một số điều, khoản của Luật Giáo dục đại học 1. Thay thế từ “chủ động” bằng từ “tự chủ” tại khoản 2 Điều 8; cụm từ “viện nghiên cứu khoa học” bằng cụm từ “viện hàn lâm, vi ện” tại Điều 30; cụm từ “tự chịu trách nhi ệm” bằng cụm từ “có trách nhi ệm giải trình” tại điểm dvà điểm đkhoản 1 Điều 36, khoản 4 Điều 41 và Điều 53; cụm từ “Hiệp định ký kết với Nhà nước Vi ệt Nam” bằng cụm từ “ điều ước quốc tế mà nước Cộng hòa xã hội chủ nghĩa Việt Nam là thành viên” tại khoản 1 Điều 63.",
+          "metadata": {
+            "section": "dieu_khoan_thi_hanh"
+          },
+          "score": 0.5726185639716186
+        }
+      ]
+    },
+    {
+      "id": "q20",
+      "split": "test",
+      "type": "dien_dat_lai",
+      "question": "Ai được coi là nhà đầu tư thành lập trường đại học tư thục theo quy định của Luật?",
+      "gold_page": 11,
+      "evidence_quote": "Nhà đầu tư là tổ chức, cá nhân trong nước, tổ chức, cá nhân nước ngoài đầu tư tài chính hoặc tài sản khác để thành lập trường đại học tư thục",
+      "filter": null,
+      "hit_rank": null,
+      "hit_at_1": false,
+      "hit_at_3": false,
+      "top_hits": [
+        {
+          "chunk_id": "B_luat-34-2018-qh14_p12_c2",
+          "document_id": "luat-34-2018-qh14",
+          "source": "data/34-2018-qh14..pdf",
+          "page": 12,
+          "text": "b) Trực tiếp đầu tư thành lập cơ sở giáo dục đại học tư thục theo quy định của Luật này. Trong trường hợp này, quy chế tổ chức và hoạt động của cơ sở giáo dục đại học phải quy định cụ thể về hội nghị nhà đầu tư và các phương thức hoạt động của nhà đầu tư; việc lựa chọn áp dụng quy định của pháp luật liên quan về công ty trách nhiệm hữu hạn hoặc quỹ xã hội để giải quyết những vấn đề trong cơ sở giáo dục đại học mà Luật này chưa quy định; trách nhiệm và quyền hạn của nhà đầu tư, ban kiểm soát phù hợp với quy định về công ty trách nhi ệm hữu hạn hoặc quỹ xã hội được lựa chọn.”. 12. Sửa đổi, bổ sung Điều 17 như sau: “ Điều 17. Hội đồng trường của trường đại học tư thục, trường đại học tư thục hoạt động không vì lợi nhuận",
+          "metadata": {
+            "section": "to_chuc_quan_tri"
+          },
+          "score": 0.6700892429254631
+        },
+        {
+          "chunk_id": "B_luat-34-2018-qh14_p12_c1",
+          "document_id": "luat-34-2018-qh14",
+          "source": "data/34-2018-qh14..pdf",
+          "page": 12,
+          "text": "i) Quy ết định tổ chức lại, giải thể cơ sở giáo dục đại học theo quy định của pháp luật; k) Công khai danh sách tổ chức và cá nhân góp vốn đầu tư vào cơ sở giáo dục đại học trên trang thông tin điện tử của cơ sở giáo dục đại học; l) Trách nhiệm và quyền hạn khác theo quy định của Luật đầu tư và quy định khác của pháp luật có liên quan; m) Nhà đầu tư thành lập cơ sở giáo dục đại học hoạt động không vì lợi nhuận được vinh danh về công lao góp vốn đầu tư thành lập, xây dựng và phát triển cơ sở giáo dục đại học. 3. Nhà đầu tư thành lập cơ sở giáo dục đại học được lựa chọn một trong các phương thức sau đây: a) Đầu tư thành lập tổ chức kinh tế theo quy định của Luật đầu tư, Luật doanh nghiệp để tổ chức kinh tế thành lập cơ sở giáo dục đại học tư thục theo quy định của Luật này;",
+          "metadata": {
+            "section": "to_chuc_quan_tri"
+          },
+          "score": 0.6449331137413061
+        },
+        {
+          "chunk_id": "B_luat-34-2018-qh14_p14_c1",
+          "document_id": "luat-34-2018-qh14",
+          "source": "data/34-2018-qh14..pdf",
+          "page": 14,
+          "text": "Điều 16 của Luật này; quy định tỷ lệ đại diện nhà đầu tư trong tổng số thành viên hội đồng trường đại học. 6. Chính phủ quy định chi ti ết thủ tục thành lập, công nhận hội đồng trường; việc công nhận, bãi nhiệm, miễn nhiệm chủ tịch hội đồng trường.”. 13. Sửa đổi, bổ sung Điều 18 như sau: “ Điều 18. Hội đồng đại học 1. Hội đồng đại học công lập có trách nhiệm và quyền hạn sau đây: a) Quyết định về chiến lược, kế hoạch phát tri ển, kế hoạch hàng năm của đại học, việc kết nạp thành viên mới, tổ chức lại đại học theo quy định của pháp luật; b) Ban hành quy chế tổ chức và hoạt động, quy chế tài chính, quy chế dân chủ ở cơ sở của đại học, trừ trường hợp quy định tại khoản 2 Điều 29 của Luật này, phù hợp với quy định của Luật này và quy định khác của pháp luật có liên quan;",
+          "metadata": {
+            "section": "to_chuc_quan_tri"
+          },
+          "score": 0.6313281983134073
+        }
+      ]
+    }
+  ]
+}

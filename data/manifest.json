@@ -1,0 +1,71 @@
+{
+  "source_id": "luat-34-2018-qh14",
+  "title": "Luật sửa đổi, bổ sung một số điều của Luật Giáo dục đại học (Luật số 34/2018/QH14)",
+  "source_path_or_url": "data/34-2018-qh14..pdf",
+  "publisher": "Quốc hội nước Cộng hòa Xã hội Chủ nghĩa Việt Nam khóa XIV, kỳ họp thứ 6",
+  "publication_reference": "Công báo Nước CHXHCNVN số 1135 + 1136, ngày 22-12-2018, trang 65-99",
+  "license_or_permission": "Văn bản quy phạm pháp luật của Nhà nước CHXHCN Việt Nam. Theo Điều 19 Luật Sở hữu trí tuệ, văn bản pháp luật không thuộc đối tượng bảo hộ quyền tác giả, thuộc phạm vi công cộng, được phép khai thác và sử dụng công khai.",
+  "accessed_at": "2026-11-13",
+  "effective_date": "2019-07-01",
+  "physical_pages": 36,
+  "content_pages": 35,
+  "excluded_pages": [36],
+  "page_count_rule": "Đếm các trang có nội dung điều khoản thực tế (từ trang 1 đến trang 35); loại bỏ trang 36 do là trang trắng hoàn toàn (0 ký tự).",
+  "total_characters": 81638,
+  "metadata_fields": {
+    "section": "Chủ đề / phân hệ quản lý của điều khoản trong luật",
+    "document_id": "Mã định danh văn bản (luat-34-2018-qh14)",
+    "page": "Số trang vật lý trong tài liệu PDF (từ 1 đến 35)",
+    "source": "Đường dẫn nguồn tài liệu"
+  },
+  "sections": [
+    {
+      "id": "he_thong_co_so_gd",
+      "name": "Hệ thống cơ sở giáo dục đại học, phân loại, xếp hạng",
+      "pages": [1, 2, 3, 4, 5],
+      "articles": ["Điều 2", "Điều 4", "Điều 6", "Điều 7", "Điều 9", "Điều 11", "Điều 12"]
+    },
+    {
+      "id": "to_chuc_quan_tri",
+      "name": "Cơ cấu tổ chức và quản trị đại học (Hội đồng trường, Hiệu trưởng)",
+      "pages": [6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18],
+      "articles": ["Điều 14", "Điều 15", "Điều 16", "Điều 16a", "Điều 17", "Điều 18", "Điều 20", "Điều 21"]
+    },
+    {
+      "id": "quyen_tu_chu",
+      "name": "Quyền tự chủ và trách nhiệm giải trình",
+      "pages": [19, 20, 21],
+      "articles": ["Điều 32"]
+    },
+    {
+      "id": "hoat_dong_dao_tao",
+      "name": "Hoạt động đào tạo, tuyển sinh, văn bằng và liên kết đào tạo",
+      "pages": [21, 22, 23, 24, 25, 26],
+      "articles": ["Điều 33", "Điều 34", "Điều 35", "Điều 36", "Điều 37", "Điều 38", "Điều 42", "Điều 45"]
+    },
+    {
+      "id": "kiem_dinh_chat_luong",
+      "name": "Đảm bảo và kiểm định chất lượng giáo dục đại học",
+      "pages": [26, 27, 28, 29],
+      "articles": ["Điều 49", "Điều 50", "Điều 52"]
+    },
+    {
+      "id": "giang_vien_nguoi_hoc",
+      "name": "Giảng viên và người học",
+      "pages": [29, 30],
+      "articles": ["Điều 54", "Điều 55", "Điều 60"]
+    },
+    {
+      "id": "tai_chinh_tai_san",
+      "name": "Tài chính, học phí và sở hữu tài sản",
+      "pages": [30, 31, 32, 33],
+      "articles": ["Điều 64", "Điều 65", "Điều 66", "Điều 67"]
+    },
+    {
+      "id": "dieu_khoan_thi_hanh",
+      "name": "Quản lý nhà nước và điều khoản thi hành",
+      "pages": [33, 34, 35],
+      "articles": ["Điều 68", "Điều 69", "Điều 2", "Điều 3"]
+    }
+  ]
+}
